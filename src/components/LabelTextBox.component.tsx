@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function LabelTextBox({label,placeholdertext,inputtype,minVal,maxVal,requiredVal}){
+export default function LabelTextBox(props:{label:string,placeholdertext:string,inputtype:string,minVal:string,maxVal:string,requiredVal:boolean}){
     var opacityVal:number = 0;
     const [value, setValue] = useState('');
     // const [flag,setFlag] = useState(true);
@@ -11,7 +11,7 @@ export default function LabelTextBox({label,placeholdertext,inputtype,minVal,max
         opacity: opacityVal,
     }
     var flagmsg:string = "";
-    switch(inputtype){
+    switch(props.inputtype){
         case "text": 
             break;
 
@@ -37,10 +37,10 @@ export default function LabelTextBox({label,placeholdertext,inputtype,minVal,max
     }
     return(
         <div className='flex flex-col gap-1'>
-            <label htmlFor="Name" style={labelStyle}>{label}</label>
-            <input type={inputtype}  onChange={(e) => {
+            <label htmlFor="Name" style={labelStyle}>{props.label}</label>
+            <input type={props.inputtype}  onChange={(e) => {
                 setValue(e.target.value)
-                }} name="" id="" placeholder={placeholdertext} value={value} min={minVal} max={maxVal} required={requiredVal} className='rounded-[10px] p-3 w-[100%] border-solid border-2'/>
+                }} name="" id="" placeholder={props.placeholdertext} value={value} min={props.minVal} max={props.maxVal} required={props.requiredVal} className='rounded-[10px] p-3 w-[100%] border-solid border-2'/>
             {flagmsg != "" && <p className="text-xs text-red-600">{flagmsg}</p>}
         </div>
     )

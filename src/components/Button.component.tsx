@@ -1,10 +1,10 @@
-export default function Button({buttontext, buttoncolor, buttonAction}){
+export default function Button(props:{buttontext: string,buttoncolor: string,buttonAction:any}){
     const buttonstyle ={
-        backgroundColor: buttoncolor,
+        backgroundColor: props.buttoncolor,
     }
     return(
-        <button onClick={buttonAction} style={buttonstyle} className="py-3 px-5 rounded-[10px]">
-            {buttontext}
+        <button onClick={props.buttonAction} style={buttonstyle} className="py-3 px-5 rounded-[10px]">
+            {props.buttontext}
         </button>
     )
 }

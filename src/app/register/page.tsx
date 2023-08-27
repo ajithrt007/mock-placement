@@ -10,7 +10,7 @@ import { collegeList } from '../../../public/formOptionData'
 import { branches } from '../../../public/formOptionData'
 
 export default function RegisterPage(){
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
     }
     return(

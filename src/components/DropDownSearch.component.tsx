@@ -2,10 +2,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 
-export default function DropDownSearch({options}){
+export default function DropDownSearch(props: {options:Array<string>}){
     const [dispVal,setDispVal] = useState('none');
     const [val,setVal] = useState('')
-    const [array,setArray] = useState(options)
+    const [array,setArray] = useState(props.options)
+    
 
     function showHideOptions(){
         if (dispVal == "none")
@@ -14,22 +15,21 @@ export default function DropDownSearch({options}){
             setDispVal('none');
     }
 
-    function searchandshow(e){
+    function searchandshow(e: any){
         setVal(e.target.value);
-
+        let newArray:any = [];
         if(val != ""){
-            setArray(
-                options.map((option) =>{
-                    if(option.indexOf(val) !== -1){
-                        console.log(val,array);
-                        return option
-                    }
-                })
-            )
+            newArray = array.map((option) =>{
+                if(option.indexOf(val) !== -1){
+                    console.log(val,array);
+                    return option
+                }
+            })
+            setArray(newArray)
         }
 
         else{
-            setArray(options)
+            setArray(props.options)
         }        
     }
 
