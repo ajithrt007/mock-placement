@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function DropDownSearch(props: {options:Array<string>,label:string,placeholderVal:string}){
     const [dispVal,setDispVal] = useState('none');
@@ -15,19 +15,11 @@ export default function DropDownSearch(props: {options:Array<string>,label:strin
             setDispVal('none');
     }
 
-    function searchandshow(e: any){
-        setVal(e.target.value);
+        
+    useEffect(() => {
         let newArray:any = [];
         if(val != ""){
-            // newArray = array.map((option) =>{
-            //     if(option.toLowerCase().indexOf(val.toLowerCase()) !== -1){
-            //         console.log(option.toLowerCase().indexOf(val.toLowerCase()));
-            //         return option
-            //     }
-            //     else
-            //         return null
-            // })
-            for (let i = 0;i<array.length;i++){
+            for (let i = 0;i<props.options.length;i++){
                 if(props.options[i].toLowerCase().indexOf(val.toLowerCase()) !== -1){
                     newArray.push(props.options[i]);
                 }
@@ -37,8 +29,16 @@ export default function DropDownSearch(props: {options:Array<string>,label:strin
         }
 
         else{
+            console.log(val,props.options,newArray)
             setArray(props.options)
-        }        
+        }
+    }, [props.options,val]);  
+
+    function searchandshow(e: any){
+        if (dispVal == "none"){
+            setDispVal('flex');
+        }
+        setVal(e.target.value);     
     }
 
     var opacityVal:number;
