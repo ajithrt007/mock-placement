@@ -6,8 +6,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import LabelTextBox from '@/components/LabelTextBox.component'
 import Button from '@/components/Button.component'
 import DropDownSearch from '@/components/DropDownSearch.component'
-import { collegeList } from '../../../public/formOptionData'
-import { branches } from '../../../public/formOptionData'
+import { collegeList,branches,yearofjoining,currentyear } from '../../../public/formOptionData'
 
 export default function RegisterPage(){
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -38,16 +37,15 @@ export default function RegisterPage(){
             </div>
             <form action="" onSubmit={handleSubmit}>
                 <div className='flex flex-col gap-10 items-center mt-[70px] bg-[#F1F1F1] p-5'>                
-                    <div className='bg-white p-5 flex flex-col gap-5 rounded-[15px]'>                    
+                    <div className='bg-white p-5 flex flex-col gap-5 rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>                    
                         <LabelTextBox label="Name" placeholdertext="Name" inputtype="text" minVal="" maxVal="" requiredVal={true} />
                         <LabelTextBox label="Phone Number" placeholdertext="Phone Number" inputtype="pnumber" minVal="" maxVal="" requiredVal={true} />
                         <LabelTextBox label="Email Id" placeholdertext="Email Id" inputtype="email" minVal="" maxVal="" requiredVal={true} />
                         <LabelTextBox label="IEEE Membership ID" placeholdertext="IEEE Membership ID" inputtype="number" minVal="" maxVal="" requiredVal={true} />
-                        <DropDownSearch options={branches}/>
-                        <LabelTextBox label="College" placeholdertext="College" inputtype="text" minVal="" maxVal="" requiredVal={true} />
-                        <LabelTextBox label="Branch" placeholdertext="Branch" inputtype="text" minVal="" maxVal="" requiredVal={true} />
-                        <LabelTextBox label="Year of joining College" placeholdertext="Year of joining College" inputtype="number" minVal="2020" maxVal="2023" requiredVal={true} />
-                        <LabelTextBox label="Current year" placeholdertext="Current year" inputtype="number" minVal="1" maxVal="4" requiredVal={true} />
+                        <DropDownSearch options={collegeList} label="College" placeholderVal="Choose your college"/>
+                        <DropDownSearch options={branches} label="Branch" placeholderVal="Choose your branch"/>
+                        <DropDownSearch options={yearofjoining} label="Year of joining College" placeholderVal="Choose you year of joining"/>
+                        <DropDownSearch options={currentyear} label="Current year" placeholderVal="Choose your current year"/>
                         <LabelTextBox label="Referal ID" placeholdertext="Referal ID" inputtype="text" minVal="" maxVal="" requiredVal={true} />                    
                     </div>                
                     <div className='flex gap-10'>

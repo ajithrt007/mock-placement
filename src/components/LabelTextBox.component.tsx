@@ -45,6 +45,3 @@ export default function LabelTextBox(props:{label:string,placeholdertext:string,
         </div>
     )
 }
-
-//create search dropdown
-//create error check in forms and activate next button based on it.
