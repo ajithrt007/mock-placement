@@ -39,10 +39,10 @@ export default function RegisterPage(){
     }
     const changeStage = (currentyear:string) => {
         if(Number(currentyear) > 2){
-            setStage("2")
+            setStage("2") //mockform page
         }
         else
-            setStage("3")
+            setStage("4") //final page for 2nd years
     }
 
     return(
@@ -63,10 +63,10 @@ export default function RegisterPage(){
                     </div>
             </div>
             <div className='items-center mt-[70px] bg-[#F1F1F1] p-5 flex w-full justify-center'>
-                {stage === "1"? <BasicForm stageChange={changeStage}/>:null} /basic form
-                {stage === "2"? <MockForm/>:null} /for year greater than 2 resume collection
-                {stage === "3"} /final whatsapp link page for year greater than 2
-                {stage === "4"} /final whatsapp link page for year less than 3
+                {stage === "1"? <BasicForm stageChange={changeStage}/>:null}
+                {stage === "2"? <MockForm/>:null}
+                {stage === "3"}
+                {stage === "4"}
             </div>            
             <div className='flex justify-center items-center bottom-0 bg-[#D9D9D9] w-full p-3 text-sm'>Queries? Contact <a href="mailto:mockplacement2023@gmail.com">mockplacement2023@gmail.com</a></div>
         </div>
