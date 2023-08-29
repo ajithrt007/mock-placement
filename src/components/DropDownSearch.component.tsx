@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react';
 
-export default function DropDownSearch(props: {options:Array<string>,label:string,placeholderVal:string}){
+export default function DropDownSearch(props: {options:Array<string>,label:string,placeholderVal:string,getDataFn:any}){
     const [dispVal,setDispVal] = useState('none');
     const [val,setVal] = useState('')
     const [array,setArray] = useState(props.options) 
@@ -24,12 +24,12 @@ export default function DropDownSearch(props: {options:Array<string>,label:strin
                     newArray.push(props.options[i]);
                 }
             }
-            console.log(val,props.options,newArray)
+            //console.log(val,props.options,newArray)
             setArray(newArray)
         }
 
         else{
-            console.log(val,props.options,newArray)
+            //console.log(val,props.options,newArray)
             setArray(props.options)
         }
     }, [props.options,val]);  
@@ -38,7 +38,8 @@ export default function DropDownSearch(props: {options:Array<string>,label:strin
         if (dispVal == "none"){
             setDispVal('flex');
         }
-        setVal(e.target.value);     
+        setVal(e.target.value);
+        props.getDataFn(e.target.value);     
     }
 
     var opacityVal:number;

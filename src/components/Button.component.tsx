@@ -3,7 +3,9 @@ export default function Button(props:{buttontext: string,buttoncolor: string,but
         backgroundColor: props.buttoncolor,
     }
     return(
-        <button onClick={props.buttonAction} style={buttonstyle} className="py-3 px-5 rounded-[10px]">
+        <button onClick={(e) => {
+            props.buttonAction()
+            }} style={buttonstyle} className="py-3 px-5 rounded-[10px]">
             {props.buttontext}
         </button>
     )

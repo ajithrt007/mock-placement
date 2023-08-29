@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mock-placement",
+  "private_key_id": "3a3d9268d01f72c2426944b3219658eb32ca6f2e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCyBPH72Xs2XVe9\nJB2KPoFZ9FSqanH6NaGOHVJfFD+oNbp1AhQJc+M3OWJ3+UwVOtoozK3A8xel9E8n\nyj/xlvf8mDuRv6F7tHy870fnc74zD0J4i8PoW3QhksFAJQ7ZLdgyMdsBL27pTfEa\nJ9EJOgP/TIGq92I0ROaJgAxO0Sw5Cg0Yxx35ZpenCSuA1Gxsjl7XkjTqsJD2Uqjc\nZ/0tGZv1RB8zNfZdph5B5d6eJsDJavRf3e7z/N9P7zVZlVa0ygbTpCpG7lsLTe4U\nMi5g/VrOcfndKQxMWLQXbAcqla827dx4Z+PzjHgPx4nCHCjkD3D9rs8cGeKuOaQh\nqjupvV/1AgMBAAECggEARxHaWaV1nzqcsJIeiPZzRapZsr9USYPnv4jNPdAjqc/p\nZJUz0qJFb+KlASixyzf3qJouM/3YzxQ+FbCU3qpazqkn/wP2QCDKO9N7bVez80aA\nTwfdaoI4Vr70D9u7ldDLox5sRIjfSp0nSD3lIj3bIq00h0DEIAHx16sbPswbT5md\nAb7djCRL81UJOwSaPDGF3GseM58Mk6ftHrAFw//EsqQ1tGLRS5C3zbG8QDFovl3t\nxqdzQVUlYZxDPr0HQcIGyJtF+JprUhe2HuoHD/HN3bQI9OmR/RlhZUdPBZ3xckzO\n/GQKG1Iwk4bRub5u659kWRZyaS5Qc5WL+iG568N5cQKBgQDgCmenuQ9epWVTwsw2\nF2eEBsAbZa61acCr3sDY8NhqZ6V2hYFRmOznA6qAcvP7tb+W1D69Ze3q5dz8xl+z\nLT0J3Q0E7EyFq7395D7uN9UUKJ+JLtH6K45ggV3twm8/SeYrmO4kXnjpNg0CHsE3\n0K7PZ3j5SzjKHGlpmQgIICi1BwKBgQDLaerWnkDVwbfqNv0pwvmDXOycBGNtE28b\n4lLVm4A81yaUtmOcrslix6ElZm/Gww8COziOQ7tefWOef99wHUd5ZUB4P72fPaOp\nXIbR2e8d/Qqdrh6lGnTJP1Gl5vxzmjtND1m/lq2a7WG2yygiaITBcLBhYoD1K6Ty\nU+X8xOZgIwKBgGCrXKp8KWuXRi9sIB0+4AWRvBaWO1o/tUjzppZ05YyUCEsps/D3\nYVEUvd8KusfjVjXIgwHKF2yBnmbbWbPAU1QMM2/qXeJXhnUkpRq4sJIwLRZOQ4AE\nhzyQ1WyftszCIDSzmh3LPbSzA83kY06oFqWbahF3KZvbwogz5clLxwTFAoGAdkUy\nRvEir2aAIc0xK4vy+X8ZD6m5iZ0oGCVillJgoH9ULllR17ME4stBlfZWfVHCs0Bt\npMIa+libiHe/GXfcq+fEMWaWQTVcqEdlGDTHxD7xYjbwGH0mdDC9r2F7XVfKrQaE\n31GjxRXKn7bFsiPlNHfqBeV5J5PlxwQjD/IIJNMCgYBgp8sNmecSEIO4VfvCLwCV\nC3JVDD/twcd2O17Exs0f99etDIsxQzM8D965aGvbXKo1jDFGGJ0Inqj6KYX1yHjb\ndhbHmLqkesMBYSCIGoPllAEogN5GerszVKOgiBHwBI+CVppboi2X741gZEVC//nG\nVYOy9QHBNzVnMxQGfykxVA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "master-mock-placement@mock-placement.iam.gserviceaccount.com",
+  "client_id": "100585157600393809278",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/master-mock-placement%40mock-placement.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

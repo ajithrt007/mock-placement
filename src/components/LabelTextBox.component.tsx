@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function LabelTextBox(props:{label:string,placeholdertext:string,inputtype:string,minVal:string,maxVal:string,requiredVal:boolean}){
+export default function LabelTextBox(props:{label:string,placeholdertext:string,inputtype:string,minVal:string,maxVal:string,requiredVal:boolean,getDataFn:any}){
     var opacityVal:number = 0;
     const [value, setValue] = useState('');
     // const [flag,setFlag] = useState(true);
@@ -40,6 +40,7 @@ export default function LabelTextBox(props:{label:string,placeholdertext:string,
             <label htmlFor="Name" style={labelStyle}>{props.label}</label>
             <input type={props.inputtype}  onChange={(e) => {
                 setValue(e.target.value)
+                props.getDataFn(e.target.value)
                 }} name="" id="" placeholder={props.placeholdertext} value={value} min={props.minVal} max={props.maxVal} required={props.requiredVal} className='rounded-[10px] p-3 w-[100%] border-solid border-2'/>
             {flagmsg != "" && <p className="text-xs text-red-600">{flagmsg}</p>}
         </div>
