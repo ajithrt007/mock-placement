@@ -1,4 +1,4 @@
-import CheckBoxRow from "./CheckBoxRow.component"
+import CheckBoxRow from "./CheckBoxRow"
 
 export default function CheckBoxes(){
     var choice:Array<string> = []

@@ -14,7 +14,6 @@ export default function DropDownSearch(props: {options:Array<string>,label:strin
         else
             setDispVal('none');
     }
-
         
     useEffect(() => {
         let newArray:any = [];
@@ -24,23 +23,13 @@ export default function DropDownSearch(props: {options:Array<string>,label:strin
                     newArray.push(props.options[i]);
                 }
             }
-            //console.log(val,props.options,newArray)
             setArray(newArray)
         }
 
         else{
-            //console.log(val,props.options,newArray)
             setArray(props.options)
         }
-    }, [props.options,val]);  
-
-    function searchandshow(e: any){
-        if (dispVal == "none"){
-            setDispVal('flex');
-        }
-        setVal(e.target.value);
-        props.getDataFn(e.target.value);     
-    }
+    }, [props.options,val]);
 
     var opacityVal:number;
     const labelStyle = {
@@ -53,15 +42,22 @@ export default function DropDownSearch(props: {options:Array<string>,label:strin
         maxHeight: 60*5 + 'px',
         bottom: -60*(c = Math.min(array.length,5)) + 'px',
     }
-
     return(
         <div className=''>
             <div className='flex flex-col gap-1 relative'>
                 <label htmlFor="Name" style={labelStyle}>{props.label}</label>
                 <div className='relative' onClick={showHideOptions}>
-                    <input type="text" name="" id="" onChange={searchandshow} value={val} placeholder={props.placeholderVal} required className='rounded-[10px] p-3 w-[100%] border-solid border-2'/>
+
+                    <input type="text" name="" id="" onChange={(e) => {
+        if (dispVal == "none"){
+            setDispVal('flex');
+        }
+        setVal(e.target.value);
+        // props.getDataFn(e.target.value);     
+    }} value={val} placeholder={props.placeholderVal} required className='rounded-[10px] p-3 w-[100%] border-solid border-2'/>
+                    
                     <div className='flex items-center absolute top-0 right-[10px] h-full'>
-                        <button className='bg-transparent'>
+                        <button className='bg-transparent' onClick={(e) => {e.preventDefault()}}>
                             <FontAwesomeIcon icon={faCaretDown} className='h-[20px]'/>
                         </button>
                     </div>
@@ -69,6 +65,7 @@ export default function DropDownSearch(props: {options:Array<string>,label:strin
                 <ul className='overflow-y-scroll overflow-x-hidden z-10 absolute w-full flex flex-col' style={dropdownStyle} id="dropdownOptions">
                     {array.map((items) => {return <li key={items} value={items} className='w-full p-3 bg-slate-300 hover:bg-sky-700 flex h-[60px] items-center' onClick={(e) => {
                         setVal(items)
+                        props.getDataFn(items)
                         showHideOptions()
                     }}>{items}</li>})}
                 </ul>             
