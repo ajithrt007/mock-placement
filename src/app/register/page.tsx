@@ -11,7 +11,7 @@ import CheckBoxes from '@/components/CheckBoxes'
 import { participants,mech,cse,bio,ec } from '../../../public/whatsappGroupLink'
 
 export default function RegisterPage(){
-    const [stage,setStage] = useState(1)
+    const [stage,setStage] = useState(2)
     type formData = {
         name:string,
         num:string,
@@ -42,7 +42,9 @@ export default function RegisterPage(){
     const[choice2,setChoice2] = useState('');
     const[confirmation,setConfirmation] = useState('');
 
-    const [formD,setFormD] = useState({name : '',
+    const [formD,setFormD] = useState({
+    time: Date.now(),
+    name : '',
     num : '',
     email : '',
     memid : '',
@@ -57,7 +59,9 @@ export default function RegisterPage(){
     confirmation : ''})
 
     useEffect(() => {
-        setFormD({name : name,
+        setFormD({
+            time: Date.now(),
+            name : name,
             num : num,
             email : email,
             memid : memid,
@@ -193,7 +197,7 @@ export default function RegisterPage(){
             </form>}
 
             </div>            
-            <div className='flex justify-center items-center bottom-0 bg-[#D9D9D9] w-full p-3 text-sm'>Queries? Contact <a href="mailto:mockplacement2023@gmail.com">mockplacement2023@gmail.com</a></div>
+            <div className='flex justify-center items-center bottom-0 bg-[#D9D9D9] w-full p-3 text-sm gap-1'>Queries? Contact <a href="mailto:mockplacement2023@gmail.com" className='underline-offset-1 text-blue-600'>mockplacement2023@gmail.com</a></div>
         </div>
     )
 }
