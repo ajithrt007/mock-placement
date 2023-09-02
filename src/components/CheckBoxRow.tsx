@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function CheckBoxRow(props:{checkboxName:string}){
+export default function CheckBoxRow(props:{checkboxName:string,getDataFnC:any}){
     const [isChecked, setIsChecked] = useState(false);
 
-    const handleOnChange = (e:any) => {
-        setIsChecked(!isChecked);
-        console.log(e.target.name)
-    };
+    useEffect(() => {
+        props.getDataFnC(isChecked)
+    },[isChecked,props]);
+    
     return(
         <div className="flex justify-between">
             <input type="checkbox" name={props.checkboxName} id={props.checkboxName} required checked={isChecked}
-          onChange={handleOnChange}/>
+          onChange={(e) => {
+            setIsChecked(e.target.checked);           
+        }}/>
             <div className="flex flex-col w-[90%]">
                 <img src="/Slack.jpg" alt="" className="rounded-t-[15px] w-[100%]"/>
                 <div className="flex flex-col gap-2 bg-[#F1F1F1] p-5 rounded-b-[15px]">

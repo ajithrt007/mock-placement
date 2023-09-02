@@ -7,11 +7,11 @@ import InputBox from '@/components/InputBox'
 import DropDownSearch from '@/components/DropDownSearch.component'
 import Button from '@/components/Button.component'
 import { collegeList, branches, yearofjoining, currentyear } from '../../../public/formOptionData'
-import CheckBoxes from '@/components/CheckBoxes'
 import { participants,mech,cse,bio,ec } from '../../../public/whatsappGroupLink'
+import CheckBoxRow from '@/components/CheckBoxRow'
 
 export default function RegisterPage(){
-    const [stage,setStage] = useState(2)
+    const [stage,setStage] = useState(1)
     type formData = {
         name:string,
         num:string,
@@ -40,10 +40,29 @@ export default function RegisterPage(){
     const[resume,setResume] = useState('');
     const[choice1,setChoice1] = useState('');
     const[choice2,setChoice2] = useState('');
-    const[confirmation,setConfirmation] = useState('');
+    const[confirmation,setConfirmation] = useState(false);
+
+    const [optionA,setOptionA] = useState(0)
+    const [optionB,setOptionB] = useState(0)
+    const [optionC,setOptionC] = useState(0)
+    const [optionD,setOptionD] = useState(0)
+
+    var option1:string = '';
+    var option2:string = '';
+    
+    const optionsArr:Array<string> = ['Software Engineering','Electrical Engineer','Mechanical Engineer','Biotechnical Engineer']
+    var choices:Array<Number> = [0,0,0,0];
+    
+    function getTimestamp() {
+        const now = new Date();
+        // Format the timestamp in a human-readable form
+        const formattedDate = now.toLocaleString(); // You can customize the format as needed
+      
+        return formattedDate;
+      }
 
     const [formD,setFormD] = useState({
-    time: Date.now(),
+    time: getTimestamp(),
     name : '',
     num : '',
     email : '',
@@ -56,11 +75,11 @@ export default function RegisterPage(){
     resumeLink : '',
     choice1 : '',
     choice2 : '',
-    confirmation : ''})
+    confirmation : false})
 
     useEffect(() => {
         setFormD({
-            time: Date.now(),
+            time: getTimestamp(),
             name : name,
             num : num,
             email : email,
@@ -71,12 +90,12 @@ export default function RegisterPage(){
             cyear : cyear,
             referal : referal,
             resumeLink : resume,
-            choice1 : choice1,
-            choice2 : choice2,
+            choice1 : findNthOne(1),
+            choice2 : findNthOne(2),
             confirmation : confirmation})
-    },[name,num,email,memid,college,branch,yearJoin,cyear,referal,resume,choice1,choice2,confirmation])
+    },[name,num,email,memid,college,branch,yearJoin,cyear,referal,resume,confirmation])
 
-    // console.log(formD)
+    console.log(formD)
 
     const getName = (dname:string) => {
         setName(dname)
@@ -109,7 +128,78 @@ export default function RegisterPage(){
     const getResume = (dresume:string) => {
         setResume(dresume)
     }
+    const getOptionA = (doptionA: Boolean) => {
+        if (doptionA) {
+            setOptionA(1);
+        } else {
+            setOptionA(0);
+        }        
+    }
+    const getOptionB = (doptionB: Boolean) => {
+        if (doptionB) {
+            setOptionB(1);
+        } else {
+            setOptionB(0);
+        }
+    }
+    const getOptionC = (doptionC: Boolean) => {
+        if (doptionC) {
+            setOptionC(1);
+        } else {
+            setOptionC(0);
+        }
+    }
+    const getOptionD = (doptionD: Boolean) => {
+        if (doptionD) {
+            setOptionD(1);
+        } else {
+            setOptionD(0);
+        }
+    }
 
+    choices = [optionA,optionB,optionC,optionD]
+
+    function findNthOne(no:number){
+        let count:number=0;
+        let option:string='';
+        for(let i = 0;i<choices.length;i++){
+            if(choices[i] === 1){
+                count = count + 1;
+                option = count == no ? optionsArr[i]:'';
+            }
+        }
+        console.log(option)
+        return option;
+    }
+
+    // var choiceNumber:number=0;
+    // for(let i = 0;i<choices.length;i++){
+    //     if(choices[i] === 1){
+    //         choiceNumber = choiceNumber + 1;
+    //         // console.log("Now Selected [" + choiceNumber + "]" + optionsArr[i])
+    //         option1 = (choiceNumber == 1)? optionsArr[i]:'';
+    //         option2 = (choiceNumber == 2)? optionsArr[i]:'';
+    //         console.log("Selected Options[" + choiceNumber + "] =" + option1 + "," + option2)
+    //     }
+    // }
+    // console.log(choices)
+
+    // console.log("heheSelected Options" + option1 + "," + option2)
+
+    function checkSelectedOptions(arr:Array<Number>){
+        var count:number = 0;
+        for(let i = 0;i<arr.length;i++){
+            if(arr[i] === 1){
+                count = count + 1;
+            }
+        }
+        if (count > 2 || count == 0){
+            return false
+        }
+        else{
+            return true
+        }
+    }
     return(
         <div className=''>
             <div className='w-[100vw] bg-[#1E1E1E] flex px-5 justify-between fixed top-0 items-center h-[70px] z-20'>
@@ -145,7 +235,7 @@ export default function RegisterPage(){
                         <InputBox getDataFn={getReferal} label="Referal ID" placeholderTxt="Referal ID" inputType="text"/>
                     </div> 
                     <div className='flex gap-10'>
-                        <Button buttontext="Back" buttonAction={null} buttoncolor="#BDBABA"/>
+                        <Button buttontext="Back" buttonAction={null} buttoncolor="#BDBABA" disabledF={true}/>
                         <Button buttontext="Next" buttonAction={() => {
                             if(Number(cyear) >2){
                                 setStage(2)
@@ -153,7 +243,7 @@ export default function RegisterPage(){
                             else{
                                 setStage(3)
                             }
-                        }} buttoncolor="#EDBB0A"/>
+                        }} buttoncolor="#EDBB0A" disabledF={false}/>
                     </div>
                 </form>
                 }
@@ -169,14 +259,22 @@ export default function RegisterPage(){
                         <label htmlFor="Choose">Choose your Company</label>
                         <p className='text-xs'>Atmost 2 of them can be selected</p>                 
                     </div>
-                    <CheckBoxes/>
+                    <div className="flex flex-col gap-7">
+                        <CheckBoxRow checkboxName="Software" getDataFnC={getOptionA}/>
+                        <CheckBoxRow checkboxName="Mech" getDataFnC={getOptionB}/>
+                        <CheckBoxRow checkboxName="EC" getDataFnC={getOptionC}/>
+                        <CheckBoxRow checkboxName="Bio" getDataFnC={getOptionD}/>
+                        <p className='text-sm text-red-600' style={{
+                            visibility:(checkSelectedOptions(choices) == true? 'hidden':'visible'),
+                        }}>Choose atmost two options</p>
+                    </div>
                 </div>                  
             </div>                
             <div className='flex gap-10'>
-                <Button buttontext="Back" buttonAction={null} buttoncolor="#BDBABA"/>
+                <Button buttontext="Back" buttonAction={null} buttoncolor="#BDBABA" disabledF={false}/>
                 <Button buttontext="Next" buttonAction={() => {
                     setStage(3);
-                }} buttoncolor="#EDBB0A"/>
+                }} buttoncolor="#EDBB0A" disabledF={!checkSelectedOptions(choices)}/>
             </div>
         </form>}
 
@@ -188,11 +286,17 @@ export default function RegisterPage(){
                     <p className='text-sm'>Click here to join the participants group of Mock Placements for seamless communication</p>
                 </div>
             </a>
-            {Number(cyear) > 2 && <div></div> }                
+            {Number(cyear) > 2 && <div></div> }      
+            <div className='flex gap-1'>
+                <input type="checkbox" name="Confirmation" id="Confirmation" required checked={confirmation}
+            onChange={(e) => {
+                setConfirmation(e.target.checked);   }}/> 
+                <label htmlFor="Confirmation" className="text-lg">I have joined the groups above mentioned</label>       
+            </div>          
             <div className='flex gap-10'>
                 <Button buttontext="Complete Registration" buttonAction={() => {
                     setStage(3);
-                }} buttoncolor="#EDBB0A"/>
+                }} buttoncolor="#EDBB0A" disabledF={true}/>
             </div>
             </form>}
 
