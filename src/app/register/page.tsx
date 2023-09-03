@@ -1,5 +1,6 @@
 'use client'
-import Link from 'next/link'
+
+// import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from 'react'
@@ -9,8 +10,10 @@ import Button from '@/components/Button.component'
 import { collegeList, branches, yearofjoining, currentyear } from '../../../public/formOptionData'
 import { participants,mech,cse,bio,ec } from '../../../public/whatsappGroupLink'
 import CheckBoxRow from '@/components/CheckBoxRow'
+import { useRouter } from 'next/navigation'
 
 export default function RegisterPage(){
+    const router = useRouter()
     const [stage,setStage] = useState(1)
     type formData = {
         name:string,
@@ -46,18 +49,14 @@ export default function RegisterPage(){
     const [optionB,setOptionB] = useState(0)
     const [optionC,setOptionC] = useState(0)
     const [optionD,setOptionD] = useState(0)
-
-    var option1:string = '';
-    var option2:string = '';
     
-    const optionsArr:Array<string> = ['Software Engineering','Electrical Engineer','Mechanical Engineer','Biotechnical Engineer']
+    const optionsArr:Array<string> = ['Software Engineer','Electrical Engineer','Mechanical Engineer','Biotech Engineer']
     var choices:Array<Number> = [0,0,0,0];
     
     function getTimestamp() {
         const now = new Date();
         // Format the timestamp in a human-readable form
-        const formattedDate = now.toLocaleString(); // You can customize the format as needed
-      
+        const formattedDate = now.toLocaleString(); // You can customize the format as needed      
         return formattedDate;
       }
 
@@ -78,6 +77,7 @@ export default function RegisterPage(){
     confirmation : false})
 
     useEffect(() => {
+        // console.log("USe effect called")
         setFormD({
             time: getTimestamp(),
             name : name,
@@ -90,10 +90,10 @@ export default function RegisterPage(){
             cyear : cyear,
             referal : referal,
             resumeLink : resume,
-            choice1 : findNthOne(1),
-            choice2 : findNthOne(2),
+            choice1 : choice1,
+            choice2 : choice2,
             confirmation : confirmation})
-    },[name,num,email,memid,college,branch,yearJoin,cyear,referal,resume,confirmation])
+    },[name,num,email,memid,college,branch,yearJoin,cyear,referal,resume,confirmation,choice1,choice2])
 
     console.log(formD)
 
@@ -161,30 +161,19 @@ export default function RegisterPage(){
 
     function findNthOne(no:number){
         let count:number=0;
-        let option:string='';
         for(let i = 0;i<choices.length;i++){
             if(choices[i] === 1){
                 count = count + 1;
-                option = count == no ? optionsArr[i]:'';
+                if(count === no){
+                    return optionsArr[i]
+                }
             }
         }
-        console.log(option)
-        return option;
+        return 'nil'
     }
 
-    // var choiceNumber:number=0;
-    // for(let i = 0;i<choices.length;i++){
-    //     if(choices[i] === 1){
-    //         choiceNumber = choiceNumber + 1;
-    //         // console.log("Now Selected [" + choiceNumber + "]" + optionsArr[i])
-    //         option1 = (choiceNumber == 1)? optionsArr[i]:'';
-    //         option2 = (choiceNumber == 2)? optionsArr[i]:'';
-    //         console.log("Selected Options[" + choiceNumber + "] =" + option1 + "," + option2)
-    //     }
-    // }
-    // console.log(choices)
-
-    // console.log("heheSelected Options" + option1 + "," + option2)
+    // console.log("heheheh",(choice1 === optionsArr[1] || choice2 === optionsArr[1]),choice1 === optionsArr[1],choice2 === optionsArr[1])
+    // console.log("ehehehe",(choice1 === optionsArr[2] || choice2 === optionsArr[2]),choice1 === optionsArr[2],choice2 === optionsArr[1])
 
     function checkSelectedOptions(arr:Array<Number>){
         var count:number = 0;
@@ -235,7 +224,9 @@ export default function RegisterPage(){
                         <InputBox getDataFn={getReferal} label="Referal ID" placeholderTxt="Referal ID" inputType="text"/>
                     </div> 
                     <div className='flex gap-10'>
-                        <Button buttontext="Back" buttonAction={null} buttoncolor="#BDBABA" disabledF={true}/>
+                        <Button buttontext="Back" buttonAction={() => {
+                    router.push('/')
+                }} buttoncolor="#BDBABA" disabledF={true}/>
                         <Button buttontext="Next" buttonAction={() => {
                             if(Number(cyear) >2){
                                 setStage(2)
@@ -252,7 +243,7 @@ export default function RegisterPage(){
             <div className='bg-white p-5 flex flex-col gap-5 rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
                 <div className='flex flex-col gap-0'>
                     <InputBox label="Resume Drive Link" placeholderTxt="Drive Link" inputType="text" getDataFn={getResume}/>  
-                    <p className='text-xs'>Please make sure the access is “Anyone with the link can view”.</p>                
+                    <p className='text-xs'>Please make sure the access is “Anyone with the lisetStage(3)nk can view”.</p>                
                 </div>
                 <div className='flex flex-col gap-3'>
                     <div className='flex flex-col gap-0'>
@@ -271,14 +262,17 @@ export default function RegisterPage(){
                 </div>                  
             </div>                
             <div className='flex gap-10'>
-                <Button buttontext="Back" buttonAction={null} buttoncolor="#BDBABA" disabledF={false}/>
+                <Button buttontext="Back" buttonAction={() => {setStage(1)}} buttoncolor="#BDBABA" disabledF={false}/>
                 <Button buttontext="Next" buttonAction={() => {
+                    console.log("1 = " + findNthOne(1) + "2 = " + findNthOne(2))
+                    setChoice1(findNthOne(1))
+                    setChoice2(findNthOne(2))
                     setStage(3);
-                }} buttoncolor="#EDBB0A" disabledF={!checkSelectedOptions(choices)}/>
+                }} buttoncolor="#EDBB0A" disabledF={!checkSelectedOptions(choices) && !(resume != '')}/>
             </div>
         </form>}
 
-            {stage == 3 && <form action="" onSubmit={(e) => {e.preventDefault()}} className='flex flex-col gap-10 w-full items-center'>
+            {stage == 3 && <form action="" onSubmit={(e) => {e.preventDefault()}} className='flex flex-col gap-5 w-full items-center'>
             <a href="https://en.wikipedia.org/wiki/Next.js" className='bg-white gap-5 p-5 flex justify-between rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
                 <img src="/wp.svg" alt="" className='h-full'/>
                 <div className='flex flex-col gap-1'>
@@ -286,17 +280,46 @@ export default function RegisterPage(){
                     <p className='text-sm'>Click here to join the participants group of Mock Placements for seamless communication</p>
                 </div>
             </a>
-            {Number(cyear) > 2 && <div></div> }      
+            {Number(cyear) > 2 && <>
+                {(choice1 === optionsArr[0] || choice2 === optionsArr[0]) && <a href="https://en.wikipedia.org/wiki/Next.js" className='bg-white gap-5 p-5 flex justify-between rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
+                    <img src="/wp.svg" alt="" className='h-full'/>
+                    <div className='flex flex-col gap-1'>
+                        <p className='text-lg '>{optionsArr[0]} Group</p>
+                        <p className='text-sm'>Click here to join the participants group of Mock Placements for seamless communication</p>
+                    </div>
+                </a>}
+                {(choice1 === optionsArr[1] || choice2 === optionsArr[1]) && <a href="https://en.wikipedia.org/wiki/Next.js" className='bg-white gap-5 p-5 flex justify-between rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
+                    <img src="/wp.svg" alt="" className='h-full'/>
+                    <div className='flex flex-col gap-1'>
+                        <p className='text-lg '>{optionsArr[1]} Group</p>
+                        <p className='text-sm'>Click here to join the participants group of Mock Placements for seamless communication</p>
+                    </div>
+                </a>}
+                {(choice1 === optionsArr[2] || choice2 === optionsArr[2]) && <a href="https://en.wikipedia.org/wiki/Next.js" className='bg-white gap-5 p-5 flex justify-between rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
+                    <img src="/wp.svg" alt="" className='h-full'/>
+                    <div className='flex flex-col gap-1'>
+                        <p className='text-lg '>{optionsArr[2]} Group</p>
+                        <p className='text-sm'>Click here to join the participants group of Mock Placements for seamless communication</p>
+                    </div>
+                </a>}
+                {(choice1 === optionsArr[3] || choice2 === optionsArr[3]) && <a href="https://en.wikipedia.org/wiki/Next.js" className='bg-white gap-5 p-5 flex justify-between rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
+                    <img src="/wp.svg" alt="" className='h-full'/>
+                    <div className='flex flex-col gap-1'>
+                        <p className='text-lg '>{optionsArr[3]} Group</p>
+                        <p className='text-sm'>Click here to join the participants group of Mock Placements for seamless communication</p>
+                    </div>
+                </a>}
+            </> }      
             <div className='flex gap-1'>
                 <input type="checkbox" name="Confirmation" id="Confirmation" required checked={confirmation}
             onChange={(e) => {
-                setConfirmation(e.target.checked);   }}/> 
+                setConfirmation(e.target.checked);}}/> 
                 <label htmlFor="Confirmation" className="text-lg">I have joined the groups above mentioned</label>       
             </div>          
             <div className='flex gap-10'>
                 <Button buttontext="Complete Registration" buttonAction={() => {
-                    setStage(3);
-                }} buttoncolor="#EDBB0A" disabledF={true}/>
+                    router.push('/')
+                }} buttoncolor="#EDBB0A" disabledF={!confirmation}/>
             </div>
             </form>}
 
