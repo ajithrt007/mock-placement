@@ -3,7 +3,7 @@
 // import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useState } from 'react'
+import { FormEvent, useEffect, useState } from 'react'
 import InputBox from '@/components/InputBox'
 import DropDownSearch from '@/components/DropDownSearch.component'
 import Button from '@/components/Button.component'
@@ -38,7 +38,7 @@ export default function RegisterPage(){
     const[college,setCollege] = useState('');
     const[branch,setBranch] = useState('');
     const[yearJoin,setYearJoin] = useState('');
-    const[cyear,setCyear] = useState('');
+    const[cyear,setCyear] = useState('3');
     const[referal,setReferal] = useState('');
     const[resume,setResume] = useState('');
     const[choice1,setChoice1] = useState('');
@@ -52,7 +52,7 @@ export default function RegisterPage(){
     
     const optionsArr:Array<string> = ['Software Engineer','Electrical Engineer','Mechanical Engineer','Biotech Engineer']
     var choices:Array<Number> = [0,0,0,0];
-    
+
     function getTimestamp() {
         const now = new Date();
         // Format the timestamp in a human-readable form
@@ -95,7 +95,7 @@ export default function RegisterPage(){
             confirmation : confirmation})
     },[name,num,email,memid,college,branch,yearJoin,cyear,referal,resume,confirmation,choice1,choice2])
 
-    console.log(formD)
+    
 
     const getName = (dname:string) => {
         setName(dname)
@@ -110,7 +110,6 @@ export default function RegisterPage(){
         setMemID(dmemid)
     }
     const getCollege = (dcollege:string) => {
-        console.log("The data got is" + dcollege)
         setCollege(dcollege)
     }
     const getBranch = (dbranch:string) => {
@@ -171,6 +170,20 @@ export default function RegisterPage(){
         }
         return 'nil'
     }
+    const sendData = async () => {
+        const response: any = await fetch('/api/submit', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formD)
+          });
+          
+
+        const content = await response.json();
+        alert(content.data.tableRange)
+    }
 
     // console.log("heheheh",(choice1 === optionsArr[1] || choice2 === optionsArr[1]),choice1 === optionsArr[1],choice2 === optionsArr[1])
     // console.log("ehehehe",(choice1 === optionsArr[2] || choice2 === optionsArr[2]),choice1 === optionsArr[2],choice2 === optionsArr[1])
@@ -189,6 +202,11 @@ export default function RegisterPage(){
             return true
         }
     }
+
+    const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
+        console.log(formD)
+    }
+
     return(
         <div className=''>
             <div className='w-[100vw] bg-[#1E1E1E] flex px-5 justify-between fixed top-0 items-center h-[70px] z-20'>
@@ -211,10 +229,10 @@ export default function RegisterPage(){
                 {stage == 1 && <form action="" onSubmit={(e) => {e.preventDefault()}} className='flex flex-col gap-10 w-full items-center'>
                     <div className='bg-white p-5 flex flex-col gap-5 rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
                         <InputBox getDataFn={getName} label="Name" placeholderTxt="Name" inputType="text"/>
-                        <InputBox getDataFn={getNum} label="Phone No" placeholderTxt="Phone No" inputType="number"/>
+                        <InputBox getDataFn={getNum} label="Phone No" placeholderTxt="Phone No" inputType="text"/>
                         <InputBox getDataFn={getEmail} label="Email" placeholderTxt="Email" inputType="email"/>
                         <div className='flex flex-col gap-1'>
-                            <InputBox getDataFn={getMemID} label="IEEE Membership ID" placeholderTxt="IEEE Membership ID" inputType="number"/>
+                            <InputBox getDataFn={getMemID} label="IEEE Membership ID" placeholderTxt="IEEE Membership ID" inputType="text"/>
                             <p className="text-xs">If non an IEEE member enter 0</p>
                         </div>
                         <DropDownSearch options={collegeList} label="College" placeholderVal='Choose your College' getDataFn={getCollege}/>
@@ -228,6 +246,7 @@ export default function RegisterPage(){
                     router.push('/')
                 }} buttoncolor="#BDBABA" disabledF={true}/>
                         <Button buttontext="Next" buttonAction={() => {
+                            sendData()
                             if(Number(cyear) >2){
                                 setStage(2)
                             }
@@ -268,7 +287,7 @@ export default function RegisterPage(){
                     setChoice1(findNthOne(1))
                     setChoice2(findNthOne(2))
                     setStage(3);
-                }} buttoncolor="#EDBB0A" disabledF={!checkSelectedOptions(choices) && !(resume != '')}/>
+                }} buttoncolor="#EDBB0A" disabledF={!((checkSelectedOptions(choices)) && (resume != ''))}/>
             </div>
         </form>}
 
@@ -317,12 +336,15 @@ export default function RegisterPage(){
                 <label htmlFor="Confirmation" className="text-lg">I have joined the groups above mentioned</label>       
             </div>          
             <div className='flex gap-10'>
-                <Button buttontext="Complete Registration" buttonAction={() => {
+                <Button buttontext="Complete Registration" buttonAction={(e:FormEvent<HTMLFormElement>) => {
+                    handleSubmit(e)
                     router.push('/')
                 }} buttoncolor="#EDBB0A" disabledF={!confirmation}/>
             </div>
             </form>}
-
+            {stage == 4 && <div className="min-height flex flex-col gap-5 items-center justify-center w-screen">
+            <p className="text-2xl font-semibold">Registration Closed</p>
+            </div>}
             </div>            
             <div className='flex justify-center items-center bottom-0 bg-[#D9D9D9] w-full p-3 text-sm gap-1'>Queries? Contact <a href="mailto:mockplacement2023@gmail.com" className='underline-offset-1 text-blue-600'>mockplacement2023@gmail.com</a></div>
         </div>
