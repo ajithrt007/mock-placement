@@ -1,6 +1,6 @@
 'use client'
 
-// import Link from 'next/link'
+import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FormEvent, useEffect, useState } from 'react'
@@ -11,6 +11,7 @@ import { collegeList, branches, yearofjoining, currentyear } from '../../../publ
 import { participants,mech,cse,bio,ec } from '../../../public/whatsappGroupLink'
 import CheckBoxRow from '@/components/CheckBoxRow'
 import { useRouter } from 'next/navigation'
+import Navbar from '@/components/Navbar'
 
 export default function RegisterPage(){
     const router = useRouter()
@@ -170,20 +171,41 @@ export default function RegisterPage(){
         }
         return 'nil'
     }
-    const sendData = async () => {
-        const response: any = await fetch('/api/submit', {
-            method: 'POST',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formD)
-          });
+    
+//     const sendData = async () => {
+//         const response: any = await fetch('/api/submit', {
+//             method: 'POST',
+//             headers: {
+//               'Accept': 'application/json',
+//               'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify(formD)
+//           });
           
 
-        const content = await response.json();
-        alert(content.data.tableRange)
-    }
+//         const content = await response.json();
+//         alert(content.data.tableRange)
+//     }
+
+//     const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID,);
+
+// // Append Function
+// const appendSpreadsheet = async (row:formData) => {
+//   try {
+//     await doc.useServiceAccountAuth({
+//       client_email: process.env.GOOGLE_CLIENT_EMAIL,
+//       private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+//     });
+//     // loads document properties and worksheets
+//     await doc.loadInfo();
+
+//     const sheet = doc.sheetsById[0];
+//     await sheet.addRow(row);
+//     console.log("row added")
+//   } catch (e) {
+//     console.error('Error: ', e);
+//   }
+// };
 
     // console.log("heheheh",(choice1 === optionsArr[1] || choice2 === optionsArr[1]),choice1 === optionsArr[1],choice2 === optionsArr[1])
     // console.log("ehehehe",(choice1 === optionsArr[2] || choice2 === optionsArr[2]),choice1 === optionsArr[2],choice2 === optionsArr[1])
@@ -224,6 +246,7 @@ export default function RegisterPage(){
                         </button>                       
                     </div>
             </div>
+            <Navbar/>
             <div className='items-center mt-[70px] bg-[#F1F1F1] p-5 flex w-full justify-center'>
 
                 {stage == 1 && <form action="" onSubmit={(e) => {e.preventDefault()}} className='flex flex-col gap-10 w-full items-center'>
@@ -246,7 +269,6 @@ export default function RegisterPage(){
                     router.push('/')
                 }} buttoncolor="#BDBABA" disabledF={true}/>
                         <Button buttontext="Next" buttonAction={() => {
-                            sendData()
                             if(Number(cyear) >2){
                                 setStage(2)
                             }
