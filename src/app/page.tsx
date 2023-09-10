@@ -32,8 +32,7 @@ export default function Home(){
                     <FontAwesomeIcon icon={faBars} className='h-[20px]'/>
                   </button>                       
               </div>
-            </div>
-            
+            </div>            
         </div>
         <section className='flex flex-col gap-10 w-full px-5 items-center justify-center' style={firstSection}>
               <div className='flex items-center gap-6 text-sm font-medium'>
@@ -78,7 +77,11 @@ export default function Home(){
             <div className='flex flex-col gap-5 items-start'>
               <h1 className='font-extrabold text-2xl whitespace-nowrap text-center'>The Mock Placement</h1>
               <p>A panel discussion on the topic  &quot;Will AI Replace Human Beings?&quot; as part of our mock placement event. This engaging session will feature a diverse panel of experts who will share their insights on the impact of AI and automation on various industries. The event will be broadcasted live on YouTube and other social media platforms to encourage a broader audience to join the conversation.</p>
-              <Button buttontext="View Details" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/mockplacement')}}/>
+              <div className='flex gap-5'>
+                <Button buttontext="Leaderboard" buttoncolor="#FFFFFF" buttonAction={()=>{router.push('/leaderboard')}}/>
+                <Button buttontext="View Details" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/mockplacement')}}/>
+              </div>
+              
             </div>
           </section>
         </div>
