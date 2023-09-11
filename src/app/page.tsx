@@ -45,7 +45,7 @@ export default function Home(){
 
               <Button buttontext="Register" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/register')}}/>
         </section>
-        <section className='bg-[#1E1E1E] md:py-5 md:px-10 p-4'>
+        <section className='bg-[#1E1E1E] md:py-5 md:px-10 p-7'>
           <div className='flex gap-1 w-full items-center justify-center p-8'>
             <h1 className=' font-extrabold text-2xl text-white whitespace-nowrap'>What is</h1>
             <p className='text-[#EDBB0A] font-extrabold text-2xl whitespace-nowrap'>Mock Placement ?</p>
@@ -97,8 +97,8 @@ export default function Home(){
           </div>
         </section>
 
-        <section className='md:py-5 md:px-10'>
-          <div className='flex gap-1 w-full items-center justify-center p-8'>
+        <section className='md:py-5 md:px-10 px-7'>
+          <div className='flex gap-1 w-full items-center justify-center p-8 flex-wrap'>
             <h1 className=' font-extrabold text-2xl whitespace-nowrap'>Story Behind</h1>
             <p className='text-[#EDBB0A] font-extrabold text-2xl whitespace-nowrap'>Mock Placement</p>
           </div>
