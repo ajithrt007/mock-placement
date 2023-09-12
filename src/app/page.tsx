@@ -5,11 +5,14 @@ import { useRouter } from 'next/navigation'
 import FeatureSquare from '@/components/FeatureSquare'
 import EventSection from '@/components/EventSection'
 import FAQ from '@/components/FAQ'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home(){
   const firstSection = {
     height: 'calc(100vh - 90px - 17vh)'
   }
+
   const router = useRouter()
     return(
       <>
