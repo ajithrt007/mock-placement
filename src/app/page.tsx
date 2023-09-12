@@ -1,6 +1,5 @@
 'use client'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 import Button from '@/components/Button.component'
 import { useRouter } from 'next/navigation'
 import FeatureSquare from '@/components/FeatureSquare'
@@ -13,32 +12,12 @@ export default function Home(){
   }
   const router = useRouter()
     return(
-      <div>
-        <div className="sticky top-0 z-10">
-          <div className='text-sm tracking-wide bg-[#EDBB0A] flex items-center h-[30px]'>
-            Deadline to Register: 16th September 2023
-          </div>
-            <div className='w-[100vw] bg-[#1E1E1E] flex px-5 justify-between items-center h-[60px] z-20'>
-              <img src="/mockplacement-yellow.svg" alt="" className='h-[25px]'/>
-              <div className='text-white flex gap-5'>
-                        {/* <a href='#'>About</a>
-                        <a href='#'>Events</a>
-                        <Link href="/mockplacement">Mock Placement</Link>
-                        <a href='#'>Calander</a>
-                        <Link href="/leaderboard">Leaderboard</Link>
-                        <Link href="/register">Register</Link>
-                        <a href='#'>Contact</a> */}
-                  <button className=''>
-                    <FontAwesomeIcon icon={faBars} className='h-[20px]'/>
-                  </button>                       
-              </div>
-            </div>            
-        </div>
+      <>
         <section className='flex flex-col gap-10 w-full px-5 items-center justify-center' style={firstSection}>
               <div className='flex items-center gap-6 text-sm font-medium'>
-                <img src="/SB Black.svg" alt="" className='sm:h-[50px] h-[23px]'/>
+              <Link href="https://ieeesctsb.org/"><img src="/SB Black.svg" alt="" className='sm:h-[50px] h-[23px]'/></Link>
                 In Collaboration with
-                <img src="/YP_black.svg" alt="" className='sm:h-[50px] h-[23px]'/>
+                <Link href="https://yp.ieeekerala.org/"><img src="/YP_black.svg" alt="" className='sm:h-[50px] h-[23px]'/></Link>
               </div>
               <img src="/mockplacement-yellow.svg" alt="" className='lg:w-[42%] md:w-[62%] w-[80%]'/>
               <p className='text-3xl font-bold'>FUTURE IS KNOCKING</p>
@@ -72,6 +51,9 @@ export default function Home(){
           <EventSection image="/panel.svg" heading="Panel Discussion" content="Join our enlightening panel discussion on 'Will AI Replace Humans?' as we explore the future of work in the AI era. Our experts from AI, tech, ethics, and HR will share insights into how AI impacts jobs and society. This event will be streamed live on YouTube, ensuring a global audience. We'll demystify AI's capabilities and limitations while highlighting its potential to enhance human creativity and innovation. Don't miss this engaging conversation that delves into the coexistence of AI and humanity. Tune in to gain valuable insights into the evolving relationship between AI and the workforce." />
           <EventSection image="/linkedin.svg" heading="Linkedin: The powerful Tool" content="Join 'LinkedIn: The Powerful Tool' to supercharge your career. This event is designed for recent college graduates, offering valuable insights into the world of professional networking and the transformative potential of LinkedIn. Learn how to create a standout LinkedIn profile, even with limited experience. Discover the essentials of CV building, effective networking, and personal branding. Attend this invaluable opportunity to kickstart your professional journey with LinkedIn. Gain the skills and confidence needed to navigate the professional landscape with a powerful tool at your disposal." />
           <EventSection image="/ai.svg" heading="AI the future, Careers, opportunites" content="Explore the expansive aspects of AI in this informative talk session. This event is your gateway to understanding how Artificial Intelligence (AI) is reshaping careers and job prospects. Join us to uncover the potential of AI in various industries and how it can benefit your career. Learn how to integrate AI into your skillset and discover the exciting job roles it opens up. Our expert speakers will offer practical insights and guidance on navigating the AI-driven job market. This is your chance to grasp how AI can be the key to unlocking a world of career opportunities." />
+          <EventSection image="/skillSection.svg" heading="And That’s how I realised my skill" content="A panel discussion on the topic  &quot;Will AI Replace Human Beings?&quot; as part of our mock placement event. This engaging session will feature a diverse panel of experts who will share their insights on the impact of AI and automation on various industries. The event will be broadcasted live on YouTube and other social media platforms to encourage a broader audience to join the conversation." />
+          <EventSection image="/gear.svg" heading="Gear Up" content="This is a comprehensive event designed to equip participants with essential knowledge and skills for a successful career journey. This informative session covers crucial topics such as coding, emphasizing its contemporary relevance in the digital era. It also explores the development of essential soft skills, recognizing their pivotal role in personal and professional growth. Additionally, the event delves into effective time management and productivity strategies, essential for achieving long-term goals. Furthermore, it underscores the importance of networking, facilitating valuable connections that can shape future opportunities. &quot; Gear Up &quot; ensures participants are well-prepared for their career endeavors." />
+          <EventSection image="/career.svg" heading="Career Path" content="A panel discussion on the topic  &quot;Will AI Replace Human Beings?&quot; as part of our mock placement event. This engaging session will feature a diverse panel of experts who will share their insights on the impact of AI and automation on various industries. The event will be broadcasted live on YouTube and other social media platforms to encourage a broader audience to join the conversation." />
           <section className='even:bg-white odd:bg-[#E9E9E9] flex odd:flex-row even:flex-row-reverse p-10 gap-10 items-center flex-wrap md:flex-nowrap'>
             <img src="/mockplace.svg" alt="" />
             <div className='flex flex-col gap-5 items-start'>
@@ -104,7 +86,7 @@ export default function Home(){
           </div>
           <p className='text-sm tracking-wide'>Mock Placement was a brainchild developed to address the lack of explanation or reasoning behind the rejection experienced by potential candidates in the placement screening process. It is our vision that all candidates should have an understanding of why they struck out and how to develop their overall skill set and be better equipped to face placements in the future. Our events are planned in such a way that our feedback and recommendation system will help you understand your strengths and weaknesses. We believe that instead of straight up rejections without any explanation as to why, it will be a better solution to explain to candidates why they were skipped over for someone else. This led to the development of Mock Placement and review systems.</p>
         </section>
-      </div>
+      </>
         
     )
 }

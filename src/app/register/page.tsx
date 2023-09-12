@@ -1,7 +1,4 @@
 'use client'
-import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from 'react'
 import InputBox from '@/components/InputBox'
 import DropDownSearch from '@/components/DropDownSearch.component'
@@ -11,7 +8,7 @@ import CheckBoxes from '@/components/CheckBoxes'
 import { participants,mech,cse,bio,ec } from '../../../public/whatsappGroupLink'
 
 export default function RegisterPage(){
-    const [stage,setStage] = useState(2)
+    const [stage,setStage] = useState(1)
     type formData = {
         name:string,
         num:string,
@@ -111,23 +108,8 @@ export default function RegisterPage(){
     }
 
     return(
-        <div className=''>
-            <div className='w-[100vw] bg-[#1E1E1E] flex px-5 justify-between fixed top-0 items-center h-[70px] z-20'>
-                <img src="/mockplacement-yellow.svg" alt="" className='h-[25px]'/>
-                    <div className='text-white flex gap-5'>
-                        {/* <a href='#'>About</a>
-                        <a href='#'>Events</a>
-                        <Link href="/mockplacement">Mock Placement</Link>
-                        <a href='#'>Calander</a>
-                        <Link href="/leaderboard">Leaderboard</Link>
-                        <Link href="/register">Register</Link>
-                        <a href='#'>Contact</a> */}
-                        <button className=''>
-                            <FontAwesomeIcon icon={faBars} className='h-[20px]'/>
-                        </button>                       
-                    </div>
-            </div>
-            <div className='items-center mt-[70px] bg-[#F1F1F1] p-5 flex w-full justify-center'>
+        <>
+            <div className='items-center bg-[#F1F1F1] p-5 flex w-full justify-center'>
 
                 {stage == 1 && <form action="" onSubmit={(e) => {e.preventDefault()}} className='flex flex-col gap-10 w-full items-center'>
                     <div className='bg-white p-5 flex flex-col gap-5 rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
@@ -198,6 +180,6 @@ export default function RegisterPage(){
 
             </div>            
             <div className='flex justify-center items-center bottom-0 bg-[#D9D9D9] w-full p-3 text-sm gap-1'>Queries? Contact <a href="mailto:mockplacement2023@gmail.com" className='underline-offset-1 text-blue-600'>mockplacement2023@gmail.com</a></div>
-        </div>
+        </>
     )
 }
