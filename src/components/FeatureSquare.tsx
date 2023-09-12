@@ -4,9 +4,9 @@ import { useEffect } from 'react';
 
 export default function FeatureSquare(props:{icon:string,heading:string,content:string}){
 
-    AOS.init();
   useEffect(() => {
     AOS.init();
+    AOS.refresh();
   }, [])
 
 
