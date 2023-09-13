@@ -46,18 +46,18 @@ export default function RootLayout({
           </div>
             <div className='w-full bg-[#1E1E1E] flex px-5 justify-between items-center h-[60px] z-20'>
               <img src="/mockplacement-yellow.svg" alt="" className='h-[25px]'/>
-              <div className='text-white flex gap-5'>
+              {/* <div className='text-white flex gap-5'>
                   <button className=''>
                     <FontAwesomeIcon icon={faBars} className='h-[20px]'/>
                   </button>                       
-              </div>
+              </div> */}
             </div>            
         </div>
         {children}
-        <div className='w-full bg-[#1E1E1E] flex md:px-10 px-7 py-16 gap-3 flex-wrap md:flex-nowrap justify-between' >
+        <div className='w-full bg-[#1E1E1E] flex md:px-10 px-7 py-16 gap-10 flex-wrap md:flex-nowrap justify-between' >
           <div className='flex flex-col items-start gap-3'>
             <img src="/mockplacement-yellow.svg" alt="" className='h-[25px]'/>
-            <p className='text-white text-sm tracking-wide'>
+            <p className='text-white text-sm tracking-wide text-justify'>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
             </p>
             <a href="https://nextjs.org/docs/app/api-reference/functions/redirect" className="py-2 px-3 rounded-[10px] bg-black text-[#E9E9E9] text-xs tracking-wide" target="_blank" rel="noopener noreferrer">Feedback Form</a>
@@ -65,10 +65,10 @@ export default function RootLayout({
 
           <div className='flex flex-col items-start gap-3'>
             <h1 className='text-lg font-bold text-[#EDBB0A]'>IEEE SCT SB</h1>
-            <p className='text-[#E9E9E9] text-sm tracking-wide'>
+            <p className='text-[#E9E9E9] text-sm tracking-wide text-justify'>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
             </p>
-            <div className='flex gap-2'>
+            <div className='flex gap-4'>
               <a href="https://www.instagram.com/ieeesctsb/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} className='text-white hover:text-[#E9E9E9]'/></a>
               <a href="https://ieeesctsb.org/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGlobe} className='text-white hover:text-[#E9E9E9]'/></a>
               <a href="https://www.linkedin.com/company/ieeesctsb/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} className='text-white hover:text-[#E9E9E9]'/></a>
@@ -77,10 +77,10 @@ export default function RootLayout({
 
           <div className='flex flex-col items-start gap-3'>
             <h1 className='text-lg font-bold text-[#EDBB0A]'>IEEE YP KS</h1>
-            <p className='text-[#E9E9E9] text-sm tracking-wide'>
+            <p className='text-[#E9E9E9] text-sm tracking-wide text-justify'>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
             </p>
-            <div className='flex gap-2'>
+            <div className='flex gap-4'>
               <a href="https://www.instagram.com/ieeekeralayp/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} className='text-white hover:text-[#E9E9E9]'/></a>
               <a href="https://yp.ieeekerala.org/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGlobe} className='text-white hover:text-[#E9E9E9]'/></a>
               <a href="https://www.linkedin.com/company/ieee-kerala-young-professionals/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} className='text-white hover:text-[#E9E9E9]'/></a>

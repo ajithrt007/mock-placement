@@ -25,7 +25,8 @@ export default function Home(){
               <img src="/mockplacement-yellow.svg" alt="" className='lg:w-[42%] md:w-[62%] w-[80%]'/>
               <p className='text-3xl font-bold'>FUTURE IS KNOCKING</p>
 
-              <Button buttontext="Register" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/register')}}/>
+              {/* <Button buttontext="Register" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/register')}}/> */}
+              <a href="https://nextjs.org/docs/app/api-reference/functions/redirect" className="py-2 px-5 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Register</a>
         </section>
         <section className='bg-[#1E1E1E] md:py-5 md:px-10 p-7'>
           <div className='flex gap-1 w-full items-center justify-center p-8'>
