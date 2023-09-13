@@ -114,7 +114,7 @@ export default function RegisterPage(){
                 {stage == 1 && <form action="" onSubmit={(e) => {e.preventDefault()}} className='flex flex-col gap-10 w-full items-center'>
                     <div className='bg-white p-5 flex flex-col gap-5 rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
                         <InputBox getDataFn={getName} label="Name" placeholderTxt="Name" inputType="text"/>
-                        <InputBox getDataFn={getNum} label="Phone No" placeholderTxt="Phone No" inputType="number"/>
+                        <InputBox getDataFn={getNum} label="Phone No" placeholderTxt="Phone No" inputType="text"/>
                         <InputBox getDataFn={getEmail} label="Email" placeholderTxt="Email" inputType="email"/>
                         <div className='flex flex-col gap-1'>
                             <InputBox getDataFn={getMemID} label="IEEE Membership ID" placeholderTxt="IEEE Membership ID" inputType="number"/>
