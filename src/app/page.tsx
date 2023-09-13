@@ -63,8 +63,8 @@ export default function Home(){
               <h1 className='font-extrabold text-2xl whitespace-nowrap text-center'>The Mock Placement</h1>
               <p>A panel discussion on the topic  &quot;Will AI Replace Human Beings?&quot; as part of our mock placement event. This engaging session will feature a diverse panel of experts who will share their insights on the impact of AI and automation on various industries. The event will be broadcasted live on YouTube and other social media platforms to encourage a broader audience to join the conversation.</p>
               <div className='flex gap-5'>
-                <Button buttontext="Leaderboard" buttoncolor="#FFFFFF" buttonAction={()=>{router.push('/leaderboard')}}/>
-                <Button buttontext="View Details" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/mockplacement')}}/>
+                <Button buttontext="Leaderboard" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/leaderboard')}}/>
+                {/* <Button buttontext="View Details" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/mockplacement')}}/> */}
               </div>
               
             </div>

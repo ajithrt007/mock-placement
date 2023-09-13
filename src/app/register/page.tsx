@@ -178,8 +178,7 @@ export default function RegisterPage(){
             </div>
             </form>}
 
-            </div>            
-            <div className='flex justify-center items-center bottom-0 bg-[#D9D9D9] w-full p-3 text-sm gap-1'>Queries? Contact <a href="mailto:mockplacement2023@gmail.com" className='underline-offset-1 text-blue-600'>mockplacement2023@gmail.com</a></div>
+            </div>
         </>
     )
 }
