@@ -58,7 +58,7 @@ export default function RootLayout({
           <div className='flex flex-col items-start gap-3'>
             <img src="/mockplacement-yellow.svg" alt="" className='h-[25px]'/>
             <p className='text-white text-sm tracking-wide text-justify'>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+            Mock placement is the result of IEEE SCT SB&apos;s collaborative efforts for a real placement experience to participants. Give us your valuable feedback so that we can be back with a better version next time!
             </p>
             <a href="https://nextjs.org/docs/app/api-reference/functions/redirect" className="py-2 px-3 rounded-[10px] bg-black text-[#E9E9E9] text-xs tracking-wide" target="_blank" rel="noopener noreferrer">Feedback Form</a>
           </div>
@@ -66,7 +66,7 @@ export default function RootLayout({
           <div className='flex flex-col items-start gap-3'>
             <h1 className='text-lg font-bold text-[#EDBB0A]'>IEEE SCT SB</h1>
             <p className='text-[#E9E9E9] text-sm tracking-wide text-justify'>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+            The IEEE SCT SB is a vibrant student group dedicated to connecting young minds with technology and social networks.Our goal is to ensure that students stay current with latest technological trends and prepare them for successful careers.
             </p>
             <div className='flex gap-4'>
               <a href="https://www.instagram.com/ieeesctsb/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} className='text-white hover:text-[#E9E9E9]'/></a>
@@ -78,7 +78,7 @@ export default function RootLayout({
           <div className='flex flex-col items-start gap-3'>
             <h1 className='text-lg font-bold text-[#EDBB0A]'>IEEE YP KS</h1>
             <p className='text-[#E9E9E9] text-sm tracking-wide text-justify'>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+            IEEE Kerala Young Professionals comprises dedicated IEEE volunteers who are in the initial phases of their professional journeys. Throughout the years the primary focus has been on providing technical guidance and mentorships to different sections of the society.
             </p>
             <div className='flex gap-4'>
               <a href="https://www.instagram.com/ieeekeralayp/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} className='text-white hover:text-[#E9E9E9]'/></a>

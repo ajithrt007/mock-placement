@@ -1,15 +1,15 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars,faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import LeaderRow from "@/components/LeaderRow";
 import Link from "next/link";
 
 export default function Leaderboard() {
   return (
     <>
-      <section className="w-full flex flex-col items-center">
+      <section className="w-full flex flex-col items-center py-10">
         <div className="flex items-center">
-            <Link href="/" className="rounded-full bg-[#EDBB0A] p-3"><FontAwesomeIcon icon={faArrowLeft} className='h-[20px]'/></Link>
+            <Link href="/" className="rounded-full bg-[#EDBB0A] p-3 flex items-center justify-center"><FontAwesomeIcon icon={faArrowLeft} className='h-[20px]'/></Link>
           <div className="flex p-8">
             <h1 className=" font-extrabold text-2xl whitespace-nowrap">
               Leader

@@ -1,182 +1,75 @@
 'use client'
-import { useEffect, useState } from 'react'
-import InputBox from '@/components/InputBox'
-import DropDownSearch from '@/components/DropDownSearch.component'
-import Button from '@/components/Button.component'
-import { collegeList, branches, yearofjoining, currentyear } from '../../../public/formOptionData'
-import CheckBoxes from '@/components/CheckBoxes'
-import { participants,mech,cse,bio,ec } from '../../../public/whatsappGroupLink'
+
+// import { useEffect, useState } from 'react'
+// import InputBox from '@/components/InputBox'
+// import DropDownSearch from '@/components/DropDownSearch.component'
+// import Button from '@/components/Button.component'
+// import { collegeList, branches, yearofjoining, currentyear } from '../../../public/formOptionData'
+// import CheckBoxes from '@/components/CheckBoxes'
+// import { participants,mech,cse,bio,ec } from '../../../public/whatsappGroupLink'
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark, faCheck, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
+// 
 
 export default function RegisterPage(){
-    const [stage,setStage] = useState(1)
-    type formData = {
-        name:string,
-        num:string,
-        email:string,
-        memid:string,
-        college:string,
-        branch:string,
-        yearJoin:string,
-        cyear:string,
-        referal:string,
-        resumeLink:string,
-        choice1:string,
-        choice2:string,
-        confirmation:string
-    }
-
-    const[name,setName] = useState('');
-    const[num,setNum] = useState('');
-    const[email,setEmail] = useState('');
-    const[memid,setMemID] = useState('');
-    const[college,setCollege] = useState('');
-    const[branch,setBranch] = useState('');
-    const[yearJoin,setYearJoin] = useState('');
-    const[cyear,setCyear] = useState('');
-    const[referal,setReferal] = useState('');
-    const[resume,setResume] = useState('');
-    const[choice1,setChoice1] = useState('');
-    const[choice2,setChoice2] = useState('');
-    const[confirmation,setConfirmation] = useState('');
-
-    const [formD,setFormD] = useState({
-    time: Date.now(),
-    name : '',
-    num : '',
-    email : '',
-    memid : '',
-    college : '',
-    branch : '',
-    yearJoin : '',
-    cyear : '',
-    referal : '',
-    resumeLink : '',
-    choice1 : '',
-    choice2 : '',
-    confirmation : ''})
-
-    useEffect(() => {
-        setFormD({
-            time: Date.now(),
-            name : name,
-            num : num,
-            email : email,
-            memid : memid,
-            college : college,
-            branch : branch,
-            yearJoin : yearJoin,
-            cyear : cyear,
-            referal : referal,
-            resumeLink : resume,
-            choice1 : choice1,
-            choice2 : choice2,
-            confirmation : confirmation})
-    },[name,num,email,memid,college,branch,yearJoin,cyear,referal,resume,choice1,choice2,confirmation])
-
-    // console.log(formD)
-
-    const getName = (dname:string) => {
-        setName(dname)
-    }
-    const getNum = (dnum:string) => {
-        setNum(dnum)
-    }
-    const getEmail = (demail:string) => {
-        setEmail(demail)
-    }
-    const getMemID = (dmemid:string) => {
-        setMemID(dmemid)
-    }
-    const getCollege = (dcollege:string) => {
-        console.log("The data got is" + dcollege)
-        setCollege(dcollege)
-    }
-    const getBranch = (dbranch:string) => {
-        setBranch(dbranch)
-    }
-    const getYearJoin = (dyearJoin:string) => {
-        setYearJoin(dyearJoin)
-    }
-    const getCyear = (dcyear:string) => {
-        setCyear(dcyear)
-    }
-    const getReferal = (dreferal:string) => {
-        setReferal(dreferal)
-    }
-    const getResume = (dresume:string) => {
-        setResume(dresume)
-    }
 
     return(
         <>
             <div className='items-center bg-[#F1F1F1] p-5 flex w-full justify-center'>
 
-                {stage == 1 && <form action="" onSubmit={(e) => {e.preventDefault()}} className='flex flex-col gap-10 w-full items-center'>
-                    <div className='bg-white p-5 flex flex-col gap-5 rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
-                        <InputBox getDataFn={getName} label="Name" placeholderTxt="Name" inputType="text"/>
-                        <InputBox getDataFn={getNum} label="Phone No" placeholderTxt="Phone No" inputType="text"/>
-                        <InputBox getDataFn={getEmail} label="Email" placeholderTxt="Email" inputType="email"/>
-                        <div className='flex flex-col gap-1'>
-                            <InputBox getDataFn={getMemID} label="IEEE Membership ID" placeholderTxt="IEEE Membership ID" inputType="number"/>
-                            <p className="text-xs">If non an IEEE member enter 0</p>
+                <div className='flex flex-col gap-10 w-full items-center py-5'>
+                    <div className="flex items-center gap-5">
+                        <Link href="/" className="rounded-full bg-[#EDBB0A] p-3 flex items-center justify-center"><FontAwesomeIcon icon={faArrowLeft} className='h-[20px]'/></Link>
+                        <div className="flex py-4">
+                            <h1 className=" font-extrabold text-2xl whitespace-nowrap">
+                            Register&nbsp;
+                            </h1>
+                            <p className="text-[#EDBB0A] font-extrabold text-2xl whitespace-nowrap">
+                            Now!!
+                            </p>
                         </div>
-                        <DropDownSearch options={collegeList} label="College" placeholderVal='Choose your College' getDataFn={getCollege}/>
-                        <DropDownSearch options={branches} label="Branch" placeholderVal='Choose your Branch' getDataFn={getBranch}/>
-                        <DropDownSearch options={yearofjoining} label="Year of Joining" placeholderVal='Choose your Joining year' getDataFn={getYearJoin}/>
-                        <DropDownSearch options={currentyear} label="Cuurent Year" placeholderVal='Choose your Joining year' getDataFn={getCyear}/>
-                        <InputBox getDataFn={getReferal} label="Referal ID" placeholderTxt="Referal ID" inputType="text"/>
-                    </div> 
-                    <div className='flex gap-10'>
-                        <Button buttontext="Back" buttonAction={null} buttoncolor="#BDBABA"/>
-                        <Button buttontext="Next" buttonAction={() => {
-                            if(Number(cyear) >2){
-                                setStage(2)
-                            }
-                            else{
-                                setStage(3)
-                            }
-                        }} buttoncolor="#EDBB0A"/>
                     </div>
-                </form>
-                }
-
-                {stage == 2 && <form action="" onSubmit={(e) => {e.preventDefault()}} className='flex flex-col gap-10 w-full items-center'>            
-            <div className='bg-white p-5 flex flex-col gap-5 rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
-                <div className='flex flex-col gap-0'>
-                    <InputBox label="Resume Drive Link" placeholderTxt="Drive Link" inputType="text" getDataFn={getResume}/>  
-                    <p className='text-xs'>Please make sure the access is “Anyone with the link can view”.</p>                
+                
+                    <table>
+                        <tr className='even:bg-white odd:bg-[#E9E9E9]'>
+                            <th className='p-5 text-left'>Features</th>
+                            <th className='p-5 text-left'>
+                                <h1>Track 1</h1>
+                                <p className='font-light text-sm '>Open to All</p>
+                            </th>
+                            <th className='p-5 text-left'>
+                                <h1>Track 2</h1>
+                                <p className='font-light text-sm '>Exclusively for 3rd and 4th years</p>
+                            </th>
+                        </tr>
+                        <tr className='even:bg-white odd:bg-[#E9E9E9]'>
+                            <td className='p-5'>Talk Sessions</td>
+                            <td className='p-5 text-center'><FontAwesomeIcon icon={faCheck}  className='h-[20px]'/></td>
+                            <td className='p-5 text-center'><FontAwesomeIcon icon={faCheck}  className='h-[20px]'/></td>
+                        </tr>
+                        <tr className='even:bg-white odd:bg-[#E9E9E9]'>
+                            <td className='p-5'>Panel Discussion</td>
+                            <td className='p-5 text-center'><FontAwesomeIcon icon={faCheck}  className='h-[20px]'/></td>
+                            <td className='p-5 text-center'><FontAwesomeIcon icon={faCheck}  className='h-[20px]'/></td>
+                        </tr>
+                        <tr className='even:bg-white odd:bg-[#E9E9E9]'>
+                            <td className='p-5'>
+                                <h1>Mock Placement Drive</h1>
+                                <p>Including 3 rounds - Aptitude, Technical Interview and HR Interview</p>    
+                            </td>
+                            <td className='p-5 text-center'><FontAwesomeIcon icon={faXmark}  className='h-[20px]'/></td>
+                            <td className='p-5 text-center'><FontAwesomeIcon icon={faCheck}  className='h-[20px]'/></td>
+                        </tr>
+                        <tr className='even:bg-white odd:bg-[#E9E9E9]'>
+                            <td className='p-5'>Register</td>
+                            <td className='py-5 text-center'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKS1SR7uPZZ2tc-ts7tBSuNkLqJKkzyL8s9ryG9ag4Efbzng/viewform" className="py-2 px-3 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Track 1</a></td>
+                            <td className='py-5 text-center'><a href="https://docs.google.com/forms/d/e/1FAIpQLSeFiyTmeiHWlR64hHnL9L0xAVJNrW-lzTGMg9kv1LBO61_REg/viewform" className="py-2 px-3 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Track 2</a></td>
+                        </tr>
+                    </table>
+    
                 </div>
-                <div className='flex flex-col gap-3'>
-                    <div className='flex flex-col gap-0'>
-                        <label htmlFor="Choose">Choose your Company</label>
-                        <p className='text-xs'>Atmost 2 of them can be selected</p>                 
-                    </div>
-                    <CheckBoxes/>
-                </div>                  
-            </div>                
-            <div className='flex gap-10'>
-                <Button buttontext="Back" buttonAction={null} buttoncolor="#BDBABA"/>
-                <Button buttontext="Next" buttonAction={() => {
-                    setStage(3);
-                }} buttoncolor="#EDBB0A"/>
-            </div>
-        </form>}
-
-            {stage == 3 && <form action="" onSubmit={(e) => {e.preventDefault()}} className='flex flex-col gap-10 w-full items-center'>
-            <a href="https://en.wikipedia.org/wiki/Next.js" className='bg-white gap-5 p-5 flex justify-between rounded-[15px] w-[100%] sm:w-[80%] md:w-[60%] lg:w-[40%]'>
-                <img src="/wp.svg" alt="" className='h-full'/>
-                <div className='flex flex-col gap-1'>
-                    <p className='text-lg '>Mock Placement Participants Group</p>
-                    <p className='text-sm'>Click here to join the participants group of Mock Placements for seamless communication</p>
-                </div>
-            </a>
-            {Number(cyear) > 2 && <div></div> }                
-            <div className='flex gap-10'>
-                <Button buttontext="Complete Registration" buttonAction={() => {
-                    setStage(3);
-                }} buttoncolor="#EDBB0A"/>
-            </div>
-            </form>}
 
             </div>
         </>
