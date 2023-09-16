@@ -25,7 +25,8 @@ export default function Home(){
               <img src="/mockplacement-yellow.svg" alt="" className='lg:w-[42%] md:w-[62%] w-[80%]'/>
               <p className='text-3xl font-bold'>FUTURE IS KNOCKING</p>
 
-              <Button buttontext="Register" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/register')}}/>
+              <p className="py-2 px-5 rounded-[10px] bg-[#EDBB0A] tracking-wide">Registration Opening Soon</p>
+              {/* <Button buttontext="Register" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/register')}}/> */}
               {/* <a href="https://nextjs.org/docs/app/api-reference/functions/redirect" className="py-2 px-5 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Register</a> */}
         </section>
         <section className='bg-[#1E1E1E] md:py-5 md:px-10 p-7'>
@@ -33,7 +34,11 @@ export default function Home(){
             <h1 className=' font-extrabold text-2xl text-white whitespace-nowrap'>What is</h1>
             <p className='text-[#EDBB0A] font-extrabold text-2xl whitespace-nowrap'>Mock Placement ?</p>
           </div>
-          <p className='text-white text-sm tracking-wide pb-7 text-justify'>Mock Placement is an event designed to help participants in their engineering career journey. We provide insight into on-campus placements and alternative career paths. Our event includes a proctored aptitude test, technical interview, and HR round. The main attraction is our feedback and recommendation system, evaluating candidates&apos; performance and offers skill enhancement tips.</p>
+          <p className='text-white text-sm tracking-wide pb-7 text-justify'>Mock Placement is a event tailored to prepare participants for successful careers in engineering. The event aims to provide participants with a holistic understanding of on-campus placements through various activities. These include panel discussions and talk sessions, which likely cover a wide range of topics related to the placement process.
+
+It also includes a proctored aptitude stage which allows the assessment of candidates&apos; logical reasoning and problem-solving abilities, which are crucial skills in any engineering role. Following this, the incorporation of a technical interview and an HR round mirrors the actual placement process, giving participants a realistic experience and a chance to showcase their technical expertise and interpersonal skills.
+
+The standout feature of the event is the feedback and recommendation system. This system appears to be a powerful tool in providing candidates with personalized insights into their performance. It not only highlights their strengths but also identifies areas for improvement, which is invaluable for candidates seeking to enhance their skills and increase their chances of success in actual placement process.</p>
         </section>
         <section className='p-7'>
           <div className='flex gap-1 w-full items-center justify-center p-8'>
@@ -51,7 +56,7 @@ export default function Home(){
         </section>
         <h1 className='font-extrabold text-2xl whitespace-nowrap text-center p-10'>Events</h1>
         <div className='flex flex-col'>
-          <EventSection image="/hrvshr.svg" heading="HR VS HR Interview" content="This exceptional event serves as a prelude, where seasoned interviewers will interview each other, providing a fascinating glimpse into the world of HR assessments. They'll generously exchange CVs and meticulously replicate all interview procedures, granting you a comprehensive understanding of the process. Throughout, they will expertly showcase the essential skills required for successful interviews. Towards the end, they will deliver insightful analyses of each other's performances, diligently highlighting strengths and engaging in constructive conversations about strategies to minimize potential mistakes." />
+          <EventSection image="/hrvshr.svg" heading="HR: Prep for Success" content="This event is formulated to delve into the intricacies of HR interviews and receive invaluable insights. Discover proven tips, tricks, and strategies tailored to boost your interview skills and bolster your confidence. Join us for this transformative experience and kickstart your journey towards interview excellence, ensuring a strong foundation as you step into the professional world." />
           <EventSection image="/panel.svg" heading="Panel Discussion" content="Join our enlightening panel discussion on 'Will AI Replace Humans?' as we explore the future of work in the AI era. Our experts from AI, tech, ethics, and HR will share insights into how AI impacts jobs and society. This event will be streamed live on YouTube, ensuring a global audience. We'll demystify AI's capabilities and limitations while highlighting its potential to enhance human creativity and innovation. Don't miss this engaging conversation that delves into the coexistence of AI and humanity. Tune in to gain valuable insights into the evolving relationship between AI and the workforce." />
           <EventSection image="/linkedin.svg" heading="Linkedin: The powerful Tool" content="Join 'LinkedIn: The Powerful Tool' for recent college graduates to supercharge their career.  Learn to create an impressive profile, excel in CV building, networking and personal branding. Attend this valuable session to uncover the strategies for utilizing LinkedIn to kickstart your professional journey." />
           <EventSection image="/ai.svg" heading="AI the future, Careers, opportunites" content="Join our informative talk session on AI's expansive role in reshaping careers and job prospects. Our expert speakers will guide you on integrating AI into your skillset and navigating the AI job market for a world of opportunities." />
@@ -62,7 +67,7 @@ export default function Home(){
             <img src="/mockplace.svg" alt="" />
             <div className='flex flex-col gap-5 items-start'>
               <h1 className='font-extrabold text-2xl whitespace-nowrap text-center'>The Mock Placement</h1>
-              <p>A panel discussion on the topic  &quot;Will AI Replace Human Beings?&quot; as part of our mock placement event. This engaging session will feature a diverse panel of experts who will share their insights on the impact of AI and automation on various industries. The event will be broadcasted live on YouTube and other social media platforms to encourage a broader audience to join the conversation.</p>
+              <p>Mock Placement is an event designed to help participants in their engineering career journey. We provide insight into on-campus placements. Our event includes a proctored aptitude test, technical interview, and HR round. The main attraction is our feedback and recommendation system, evaluating candidates&apos; performance and offers skill enhancement tips.</p>
               <div className='flex gap-5'>
                 {/* <Button buttontext="Leaderboard" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/leaderboard')}}/> */}
                 {/* <Button buttontext="View Details" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/mockplacement')}}/> */}

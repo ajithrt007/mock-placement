@@ -60,7 +60,7 @@ export default function RootLayout({
             <p className='text-white text-sm tracking-wide text-justify'>
             Mock placement is the result of IEEE SCT SB&apos;s collaborative efforts for a real placement experience to participants. Give us your valuable feedback so that we can be back with a better version next time!
             </p>
-            <a href="https://nextjs.org/docs/app/api-reference/functions/redirect" className="py-2 px-3 rounded-[10px] bg-black text-[#E9E9E9] text-xs tracking-wide" target="_blank" rel="noopener noreferrer">Feedback Form</a>
+            <a href="https://bit.ly/feedbackmp1" className="py-2 px-3 rounded-[10px] bg-black text-[#E9E9E9] text-xs tracking-wide" target="_blank" rel="noopener noreferrer">Feedback Form</a>
           </div>
 
           <div className='flex flex-col items-start gap-3'>
