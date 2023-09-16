@@ -41,9 +41,9 @@ export default function RootLayout({
 
 
       <div className="sticky top-0 z-10">
-          <div className='text-sm tracking-wide bg-[#EDBB0A] flex items-center h-[30px]'>
+          {/* <div className='text-sm tracking-wide bg-[#EDBB0A] flex items-center h-[30px]'>
             Deadline to Register: 16th September 2023
-          </div>
+          </div> */}
             <div className='w-full bg-[#1E1E1E] flex px-5 justify-between items-center h-[60px] z-20'>
               <img src="/mockplacement-yellow.svg" alt="" className='h-[25px]'/>
               {/* <div className='text-white flex gap-5'>
