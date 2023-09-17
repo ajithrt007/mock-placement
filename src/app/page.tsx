@@ -58,24 +58,18 @@ export default function Home() {
           </p>
         </div>
         <p className="text-white text-sm tracking-wide pb-7 text-justify">
-          Mock Placement is a event tailored to prepare participants for
-          successful careers in engineering. The event aims to provide
-          participants with a holistic understanding of on-campus placements
-          through various activities. These include panel discussions and talk
-          sessions, which likely cover a wide range of topics related to the
-          placement process. It also includes a proctored aptitude stage which
-          allows the assessment of candidates&apos; logical reasoning and
-          problem-solving abilities, which are crucial skills in any engineering
-          role. Following this, the incorporation of a technical interview and
-          an HR round mirrors the actual placement process, giving participants
-          a realistic experience and a chance to showcase their technical
-          expertise and interpersonal skills. The standout feature of the event
-          is the feedback and recommendation system. This system appears to be a
-          powerful tool in providing candidates with personalized insights into
-          their performance. It not only highlights their strengths but also
-          identifies areas for improvement, which is invaluable for candidates
-          seeking to enhance their skills and increase their chances of success
-          in actual placement process.
+          The Mock Placement event is designed to equip engineering participants
+          for successful careers by offering a comprehensive preparation
+          experience. It encompasses panel discussions, talk sessions, and
+          activities covering diverse aspects of the placement process. The
+          event also incorporates a proctored aptitude stage for assessing
+          logical reasoning and problem-solving abilities, essential in
+          engineering roles. Additionally, participants undergo a technical
+          interview and an HR round, mirroring the actual placement process. A
+          standout feature is the feedback and recommendation system, providing
+          personalized insights into performance, highlighting strengths, and
+          pinpointing areas for improvement, invaluable for enhancing skills and
+          boosting chances of success in real placements.
         </p>
       </section>
       <section className="p-7">
