@@ -55,13 +55,13 @@ export default function RootLayout({
         </div>
         {children}
         <div className='w-full bg-[#1E1E1E] flex md:px-10 px-7 py-16 gap-10 flex-wrap md:flex-nowrap justify-between' >
-          <div className='flex flex-col items-start gap-3'>
+          {/* <div className='flex flex-col items-start gap-3'>
             <img src="/mockplacement-yellow.svg" alt="" className='h-[25px]'/>
             <p className='text-white text-sm tracking-wide text-justify'>
             Mock placement is the result of IEEE SCT SB&apos;s collaborative efforts for a real placement experience to participants. Give us your valuable feedback so that we can be back with a better version next time!
             </p>
             <a href="https://bit.ly/feedbackmp1" className="py-2 px-3 rounded-[10px] bg-black text-[#E9E9E9] text-xs tracking-wide" target="_blank" rel="noopener noreferrer">Feedback Form</a>
-          </div>
+          </div> */}
 
           <div className='flex flex-col items-start gap-3'>
             <h1 className='text-lg font-bold text-[#EDBB0A]'>IEEE SCT SB</h1>
