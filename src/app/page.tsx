@@ -134,12 +134,12 @@ export default function Home() {
         />
         <EventSection
           image="/linkedin.svg"
-          heading="Linkedin: The powerful Tool"
+          heading="Linkedin: The Powerful Tool"
           content="Join 'LinkedIn: The Powerful Tool' for recent college graduates to supercharge their career.  Learn to create an impressive profile, excel in CV building, networking and personal branding. Attend this valuable session to uncover the strategies for utilizing LinkedIn to kickstart your professional journey."
         />
         <EventSection
           image="/ai.svg"
-          heading="AI the future, Careers, opportunites"
+          heading="AI the Future, Careers, Opportunites"
           content="Join our informative talk session on AI's expansive role in reshaping careers and job prospects. Our expert speakers will guide you on integrating AI into your skillset and navigating the AI job market for a world of opportunities."
         />
         {/* <EventSection image="/skillSection.svg" heading="And That’s how I realised my skill" content="A panel discussion on the topic  &quot;Will AI Replace Human Beings?&quot; as part of our mock placement event. This engaging session will feature a diverse panel of experts who will share their insights on the impact of AI and automation on various industries. The event will be broadcasted live on YouTube and other social media platforms to encourage a broader audience to join the conversation." /> */}
