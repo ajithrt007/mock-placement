@@ -143,6 +143,11 @@ export default function Home() {
           content='"Gear Up" is a comprehensive event equipping participants for career success. It covers topics such as the development of essential soft skills, the importance of networking, effective time management and productivity strategies. Join us to ensure you &apos;re well-prepared for your future career endeavours.'
         />
         <EventSection
+          image="/careerpaths.svg"
+          heading="Career Kickstart: Freelancing and Internships"
+          content='Discover the advantages of freelancing, including flexibility and skill development, while learning how to create an appealing freelance portfolio. Gain insights into securing internships that align with your career goals and find out how to balance freelance work with internships effectively. Network with professionals, seek mentorship, and hear success stories to inspire your journey. This session equips students and recent graduates with essential knowledge and practical strategies for a successful start to their careers.'
+        />
+        <EventSection
           image="/career.svg"
           heading="Master's Abroad: The road map"
           content="A crucial event for prospective international master's degree candidates. It covers the significance of pursuing a master's degree, details the application process, discusses financing options including loans and scholarships, and provides guidance on post-master's career strategies. Attendees will gain insights into the value of a master's degree, receive application process guidance, explore financing avenues, and receive strategic advice for their careers after completing their Master's."
