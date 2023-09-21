@@ -42,10 +42,10 @@ export default function Home() {
         />
         <p className="text-3xl font-bold">FUTURE IS KNOCKING</p>
 
-        <p className="py-2 px-5 rounded-[10px] bg-[#EDBB0A] tracking-wide">
+        {/* <p className="py-2 px-5 rounded-[10px] bg-[#EDBB0A] tracking-wide">
           Registration Opening Soon
-        </p>
-        {/* <Button buttontext="Register" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/register')}}/> */}
+        </p> */}
+        <Button buttontext="Register" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/register')}}/>
         {/* <a href="https://nextjs.org/docs/app/api-reference/functions/redirect" className="py-2 px-5 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Register</a> */}
       </section>
       <section className="bg-[#1E1E1E] md:py-5 md:px-10 p-7">
@@ -221,9 +221,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="md:py-5 md:px-10 px-7 pb-10 flex flex-col items-center">
+      {/* <section className="md:py-5 md:px-10 px-7 pb-10 flex flex-col items-center">
         <div className="flex items-center gap-5">
-          {/* <Link href="/" className="rounded-full bg-[#EDBB0A] p-3 flex items-center justify-center"><FontAwesomeIcon icon={faArrowLeft} className='h-[20px]'/></Link> */}
+          <Link href="/" className="rounded-full bg-[#EDBB0A] p-3 flex items-center justify-center"><FontAwesomeIcon icon={faArrowLeft} className='h-[20px]'/></Link>
           <div className="flex py-4">
             <p className="text-[#EDBB0A] font-extrabold text-2xl whitespace-nowrap">
               Tracks
@@ -279,7 +279,7 @@ export default function Home() {
             </td>
           </tr>
         </table>
-      </section>
+      </section> */}
 
       <section className="md:py-5 md:px-10 px-7 pb-10">
         <div className="flex gap-1 w-full items-center justify-center p-8 flex-wrap">

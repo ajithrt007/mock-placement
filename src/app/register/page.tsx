@@ -64,8 +64,8 @@ export default function RegisterPage(){
                         </tr>
                         <tr className='even:bg-white odd:bg-[#E9E9E9]'>
                             <td className='p-5'>Register</td>
-                            <td className='py-5 text-center'><a href="https://docs.google.com/forms/d/e/1FAIpQLSfKS1SR7uPZZ2tc-ts7tBSuNkLqJKkzyL8s9ryG9ag4Efbzng/viewform" className="py-2 px-3 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Track 1</a></td>
-                            <td className='py-5 text-center'><a href="https://docs.google.com/forms/d/e/1FAIpQLSeFiyTmeiHWlR64hHnL9L0xAVJNrW-lzTGMg9kv1LBO61_REg/viewform" className="py-2 px-3 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Track 2</a></td>
+                            <td className='py-5 text-center'><a href="https://forms.gle/Qq4xmpeKJRZFjnxB8" className="py-2 px-3 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Track 1</a></td>
+                            <td className='py-5 text-center'><a href="https://forms.gle/e8Kb2VaFjFTKU6f68" className="py-2 px-3 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Track 2</a></td>
                         </tr>
                     </table>
     
