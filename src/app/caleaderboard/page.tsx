@@ -40,10 +40,10 @@ export default function CALeaderboard() {
           </div>
           <p className="w-[50px]">Points</p>
         </div>
-        {campusambassadors?.map((items: campusambassador) => {
+        {campusambassadors?.map((items: campusambassador, index: number) => {
           return (
             <LeaderRow
-              slno={1}
+              slno={index + 1}
               name={items.name}
               college={items.college}
               points={items.score}
