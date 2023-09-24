@@ -5,14 +5,6 @@ import { useRouter } from "next/navigation";
 import FeatureSquare from "@/components/FeatureSquare";
 import EventSection from "@/components/EventSection";
 import FAQ from "@/components/FAQ";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faXmark,
-  faCheck,
-  faArrowLeft,
-} from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const firstSection = {
@@ -133,7 +125,7 @@ export default function Home() {
         />
         <EventSection
           image="/ai.svg"
-          heading="AI the Future, Careers, Opportunites"
+          heading="AI the Future, Careers, Opportunities"
           content="Join our informative talk session on AI's expansive role in reshaping careers and job prospects. Our expert speakers will guide you on integrating AI into your skillset and navigating the AI job market for a world of opportunities."
         />
         {/* <EventSection image="/skillSection.svg" heading="And That’s how I realised my skill" content="A panel discussion on the topic  &quot;Will AI Replace Human Beings?&quot; as part of our mock placement event. This engaging session will feature a diverse panel of experts who will share their insights on the impact of AI and automation on various industries. The event will be broadcasted live on YouTube and other social media platforms to encourage a broader audience to join the conversation." /> */}
