@@ -35,66 +35,56 @@ export default function Leaderboard() {
             name="Ajith R T"
             college="SCT College of Engineering and Technology"
             points={987}
+            key=""
           />
           <LeaderRow
             slno={1}
             name="Ajith R T"
             college="SCT College of Engineering and Technology"
             points={987}
+            key=""
           />
           <LeaderRow
             slno={1}
             name="Ajith R T"
             college="SCT College of Engineering and Technology"
             points={987}
+            key=""
           />
           <LeaderRow
             slno={1}
             name="Ajith R T"
             college="SCT College of Engineering and Technology"
             points={987}
+            key=""
           />
           <LeaderRow
             slno={1}
             name="Ajith R T"
             college="SCT College of Engineering and Technology"
             points={987}
+            key=""
           />
           <LeaderRow
             slno={1}
             name="Ajith R T"
             college="SCT College of Engineering and Technology"
             points={987}
+            key=""
           />
           <LeaderRow
             slno={1}
             name="Ajith R T"
             college="SCT College of Engineering and Technology"
             points={987}
+            key=""
           />
           <LeaderRow
             slno={1}
             name="Ajith R T"
             college="SCT College of Engineering and Technology"
             points={987}
-          />
-          <LeaderRow
-            slno={1}
-            name="Ajith R T"
-            college="SCT College of Engineering and Technology"
-            points={987}
-          />
-          <LeaderRow
-            slno={1}
-            name="Ajith R T"
-            college="SCT College of Engineering and Technology"
-            points={987}
-          />
-          <LeaderRow
-            slno={1}
-            name="Ajith R T"
-            college="SCT College of Engineering and Technology"
-            points={987}
+            key=""
           />
         </div>
       </section>
