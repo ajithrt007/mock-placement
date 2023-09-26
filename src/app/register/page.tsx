@@ -65,7 +65,7 @@ export default function RegisterPage(){
                         <tr className='even:bg-white odd:bg-[#E9E9E9]'>
                             <td className='p-5'>Register (Free Registration)</td>
                             <td className='py-5 text-center'><a href="https://forms.gle/Qq4xmpeKJRZFjnxB8" className="py-2 px-3 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Track 1</a></td>
-                            <td className='py-5 text-center'><a href="https://forms.gle/e8Kb2VaFjFTKU6f68" className="py-2 px-3 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Track 2</a></td>
+                            <td className='py-5 text-center flex flex-col gap-2 items-center'><a href="https://forms.gle/cJhKMX19nAkfP7YU9" className="py-2 px-3 rounded-[10px] bg-[#EDBB0A] tracking-wide inline-block" target="_blank" rel="noopener noreferrer">Track 2</a><p>(Waiting List)</p></td>
                         </tr>
                     </table>
     
