@@ -1,7 +1,7 @@
 export const campusambassadors = [
     {
         "name": 'Aadi Sankar',
-        "score": 60,
+        "score": 260,
         "college": 'SCT College of Engineering, Thiruvananthapuram'
     },
     {
@@ -11,7 +11,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Afeef S',
-        "score": 44,
+        "score": 608,
         "college": 'SCT College of Engineering, Thiruvananthapuram'
     },
     {
@@ -31,12 +31,12 @@ export const campusambassadors = [
     },
     {
         "name": 'Ardra SE',
-        "score": 0,
+        "score": 200,
         "college": 'LBS Institute of Technology for Women'
     },
     {
         "name": 'Bhavana',
-        "score": 64,
+        "score": 2626,
         "college": 'Muthoot Institute of Engineering and Technology '
     },
     {
@@ -61,7 +61,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Hridhya KP',
-        "score": 196,
+        "score": 11574,
         "college": 'Model Engineering College, Thrikkakara'
     },
     {
@@ -81,7 +81,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Maheshwari SM',
-        "score": 0,
+        "score": 260,
         "college": 'Government College of Engineering, Idukki'
     },
     {
@@ -111,17 +111,17 @@ export const campusambassadors = [
     },
     {
         "name": 'Rishyka',
-        "score": 0,
+        "score": 440,
         "college": 'SCT College of Engineering, Thiruvananthapuram'
     },
     {
         "name": 'Riya Jason',
-        "score": 416,
+        "score": 3894,
         "college": 'Government College of Engineering, Perumon'
     },
     {
         "name": 'Rosh Cherian',
-        "score": 0,
+        "score": 200,
         "college": 'SCT College of Engineering, Thiruvananthapuram'
     },
     {
