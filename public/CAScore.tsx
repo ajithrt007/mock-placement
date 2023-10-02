@@ -144,4 +144,9 @@ export const campusambassadors = [
         "score": 0,
         "college": 'Government College of Engineering, Perumon'
     }
+    {
+        "name": 'Arjun R Krishna',
+        "score": 400,
+        "college": 'Govt Model Engineering College, Thrikkakara'
+    }
 ]
