@@ -31,7 +31,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Ardra SE',
-        "score": 200,
+        "score": 600,
         "college": 'LBS Institute of Technology for Women'
     },
     {
@@ -61,7 +61,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Hridhya KP',
-        "score": 11574,
+        "score": 12224,
         "college": 'Model Engineering College, Thrikkakara'
     },
     {
@@ -81,7 +81,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Maheshwari SM',
-        "score": 260,
+        "score": 460,
         "college": 'Government College of Engineering, Idukki'
     },
     {
@@ -111,12 +111,12 @@ export const campusambassadors = [
     },
     {
         "name": 'Rishyka',
-        "score": 440,
+        "score": 1640,
         "college": 'SCT College of Engineering, Thiruvananthapuram'
     },
     {
         "name": 'Riya Jason',
-        "score": 3894,
+        "score": 6102,
         "college": 'Government College of Engineering, Perumon'
     },
     {
