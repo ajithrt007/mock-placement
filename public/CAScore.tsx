@@ -11,7 +11,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Afeef S',
-        "score": 608,
+        "score": 648,
         "college": 'SCT College of Engineering, Thiruvananthapuram'
     },
     {
@@ -61,7 +61,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Hridhya KP',
-        "score": 12224,
+        "score": 12471,
         "college": 'Model Engineering College, Thrikkakara'
     },
     {
@@ -116,7 +116,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Riya Jason',
-        "score": 6102,
+        "score": 6444,
         "college": 'Government College of Engineering, Perumon'
     },
     {
