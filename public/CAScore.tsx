@@ -31,7 +31,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Ardra SE',
-        "score": 600,
+        "score": 1400,
         "college": 'LBS Institute of Technology for Women'
     },
     {
@@ -61,7 +61,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Hridhya KP',
-        "score": 12471,
+        "score": 14671,
         "college": 'Model Engineering College, Thrikkakara'
     },
     {
@@ -116,7 +116,7 @@ export const campusambassadors = [
     },
     {
         "name": 'Riya Jason',
-        "score": 6444,
+        "score": 7844,
         "college": 'Government College of Engineering, Perumon'
     },
     {
@@ -143,7 +143,7 @@ export const campusambassadors = [
         "name": 'Srithy S',
         "score": 0,
         "college": 'Government College of Engineering, Perumon'
-    }
+    },
     {
         "name": 'Arjun R Krishna',
         "score": 400,
