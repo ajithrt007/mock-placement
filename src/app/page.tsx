@@ -37,7 +37,7 @@ export default function Home() {
         {/* <p className="py-2 px-5 rounded-[10px] bg-[#EDBB0A] tracking-wide">
           Registration Opening Soon
         </p> */}
-        <Button buttontext="Register" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/register')}}/>
+        <Button buttontext="Leaderboard" buttoncolor="#EDBB0A" buttonAction={()=>{router.push('/leaderboard')}}/>
         {/* <a href="https://nextjs.org/docs/app/api-reference/functions/redirect" className="py-2 px-5 rounded-[10px] bg-[#EDBB0A] tracking-wide" target="_blank" rel="noopener noreferrer">Register</a> */}
       </section>
       <section className="bg-[#1E1E1E] md:py-5 md:px-10 p-7">
