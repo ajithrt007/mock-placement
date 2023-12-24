@@ -92,11 +92,6 @@ export const participants = [
     college: "TCR Govt. Engineering College,Thrissur.",
   },
   {
-    name: "Amulya Vinod",
-    percentage: 52,
-    college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
-  },
-  {
     name: "RAVI SANKAR B S",
     percentage: 79,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
@@ -125,11 +120,6 @@ export const participants = [
     name: "Irene Paul",
     percentage: 97.5,
     college: "WYD Govt. Engineering College, Mananthavady. G",
-  },
-  {
-    name: "Sreya Nair P B",
-    percentage: 45,
-    college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
     name: "Cittu S L",
@@ -164,11 +154,6 @@ export const participants = [
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
-    name: "GOPIKA PS",
-    percentage: 36,
-    college: "PKD Govt. Engineering College, Sreekrishnapuram.",
-  },
-  {
     name: "Akshara Thrivi.C",
     percentage: 88,
     college: "PKD Govt. Engineering College, Sreekrishnapuram.",
@@ -192,10 +177,5 @@ export const participants = [
     name: "D VIGNESH",
     percentage: 77,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
-  },
-  {
-    name: "Maheswari SM",
-    percentage: 27,
-    college: "IDK Engineering College, Idukki",
   },
 ];
