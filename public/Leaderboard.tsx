@@ -1,4 +1,19 @@
-export const participants = [
+export const participants = [  
+  {
+    name: "Alan Sabu",
+    percentage: 169.5,
+    college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
+  },
+  {
+    name: "Adarsh N",
+    percentage: 166,
+    college: "MDL Model Engineering College, Thrikkakkara.",
+  },
+  {
+    name: "GOVIND A",
+    percentage: 157.5,
+    college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
+  },
   {
     name: "Surabhi Rajesh",
     percentage: 85,
@@ -10,25 +25,12 @@ export const participants = [
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
-    name: "Alan Sabu",
-    percentage: 80,
-    college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
-  },
-  {
     name: "Hashir Bin Anwer",
-    percentage: 76,
+    percentage: 153,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
-  {
-    name: "GOVIND A",
-    percentage: 76,
-    college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
-  },
-  {
-    name: "Adarsh N",
-    percentage: 76,
-    college: "MDL Model Engineering College, Thrikkakkara.",
-  },
+  
+  
   {
     name: "K Suryasree",
     percentage: 72,
@@ -36,32 +38,32 @@ export const participants = [
   },
   {
     name: "Grace Maria George",
-    percentage: 69,
+    percentage: 128,
     college: "JEC Jyothi Engineering College, Cheruthuruthy.",
   },
   {
     name: "Vishnu Santhosh",
-    percentage: 67,
+    percentage: 132.5,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
     name: "Vidhya Vijayakumar",
-    percentage: 67,
+    percentage: 146.5,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
     name: "Akhil Varma PR",
-    percentage: 63,
+    percentage: 136.5,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
     name: "Ashwin Sivasankaran Kolapadath",
-    percentage: 63,
+    percentage: 141.5,
     college: "SCM SCMS School of Engg. & Tech., Ernakulam",
   },
   {
     name: "Famida Afsal M",
-    percentage: 60,
+    percentage: 110.5,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
@@ -76,7 +78,7 @@ export const participants = [
   },
   {
     name: "Hemandh J",
-    percentage: 56,
+    percentage: 117.5,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
@@ -86,7 +88,7 @@ export const participants = [
   },
   {
     name: "Anagha Jayan",
-    percentage: 54,
+    percentage: 130,
     college: "TCR Govt. Engineering College,Thrissur.",
   },
   {
@@ -96,32 +98,32 @@ export const participants = [
   },
   {
     name: "RAVI SANKAR B S",
-    percentage: 49,
+    percentage: 79,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
     name: "Harikrishnan K",
-    percentage: 47,
+    percentage: 117,
     college: "NCE Nehru College of Engg. & Research Centre, Thiruvillwamala.",
   },
   {
     name: "Anjali krishna s",
-    percentage: 47,
+    percentage: 88,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
     name: "Saarika S.S",
-    percentage: 47,
+    percentage: 103,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
     name: "Riya Jason",
-    percentage: 45,
+    percentage: 82,
     college: "PRN College of Engineering Perumon.",
   },
   {
     name: "Irene Paul",
-    percentage: 45,
+    percentage: 97.5,
     college: "WYD Govt. Engineering College, Mananthavady. G",
   },
   {
@@ -131,34 +133,34 @@ export const participants = [
   },
   {
     name: "Cittu S L",
-    percentage: 43,
+    percentage: 117,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
     name: "Syam Krishnan K K",
-    percentage: 43,
+    percentage: 108,
     college: "MNR College of Engineering, Munnar.",
   },
 
   {
     name: "Anumod T Pramod",
-    percentage: 43,
+    percentage: 116,
     college: "MNR College of Engineering, Munnar.",
   },
 
   {
     name: "Akshay S Nair",
-    percentage: 38,
+    percentage: 124.5,
     college: "MNR College of Engineering, Munnar.",
   },
   {
     name: "Donal Mathew P T",
-    percentage: 36,
+    percentage: 98,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
     name: "Adnan Ambalavan",
-    percentage: 36,
+    percentage: 82,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
@@ -168,27 +170,27 @@ export const participants = [
   },
   {
     name: "Akshara Thrivi.C",
-    percentage: 36,
+    percentage: 88,
     college: "PKD Govt. Engineering College, Sreekrishnapuram.",
   },
   {
     name: "KARTHIK SHANKER M",
-    percentage: 34,
+    percentage: 108,
     college: "KSD LBS College of Engineering, Kasaragod.",
   },
   {
     name: "Jerrin Mathew George",
-    percentage: 29,
+    percentage: 108,
     college: "ADR College of Engineering, Adoor",
   },
   {
     name: "Swarup Suresh",
-    percentage: 27,
+    percentage: 80,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
     name: "D VIGNESH",
-    percentage: 27,
+    percentage: 77,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
   {
