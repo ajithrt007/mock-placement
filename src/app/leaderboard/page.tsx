@@ -38,7 +38,7 @@ export default function CALeaderboard() {
           >
             <p className="text-lg font-semibold">Name</p>
           </div>
-          <p className="w-[90px]">Percentage</p>
+          <p className="w-[90px]">Score</p>
         </div>
         {participants?.map((items: participant, index: number) => {
           return (
