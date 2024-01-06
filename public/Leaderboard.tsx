@@ -1,4 +1,4 @@
-export const participants = [  
+export const participants = [
   {
     name: "Alan Sabu",
     percentage: 169.5,
@@ -16,7 +16,7 @@ export const participants = [
   },
   {
     name: "Surabhi Rajesh",
-    percentage: 85,
+    percentage: 157,
     college: "NSS N S S College of Engineering, Palakkad",
   },
   {
@@ -29,8 +29,7 @@ export const participants = [
     percentage: 153,
     college: "SCT S C T College of Engineering, Pappanamcode, TVPM",
   },
-  
-  
+
   {
     name: "K Suryasree",
     percentage: 72,
